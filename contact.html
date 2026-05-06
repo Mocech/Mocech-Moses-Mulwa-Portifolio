@@ -19,11 +19,12 @@
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 <script>
   // ── EMAILJS CONFIG ──────────────────────────────────────────────
-  // Replace these three values with your real EmailJS credentials.
+  // Replace these values with your real EmailJS credentials.
   // Get them at https://www.emailjs.com → Account → API Keys & Templates
-  const EMAILJS_PUBLIC_KEY  = 'YOUR_PUBLIC_KEY';   // e.g. "abc123XYZ"
-  const EMAILJS_SERVICE_ID  = 'YOUR_SERVICE_ID';   // e.g. "service_xxxxxx"
-  const EMAILJS_TEMPLATE_ID = 'YOUR_TEMPLATE_ID';  // e.g. "template_xxxxxx"
+  const EMAILJS_PUBLIC_KEY       = 'fHhXEmhjEAlbddgdG';        // e.g. "abc123XYZ"
+  const EMAILJS_SERVICE_ID       = 'service_rw0s578';        // e.g. "service_xxxxxx"
+  const EMAILJS_TEMPLATE_ID      = 'template_gz3k0ky';       // Template 1 — notification to Moses
+  const EMAILJS_AUTOREPLY_ID     = 'template_trhiaj'; // Template 2 — auto-reply to sender
   // ────────────────────────────────────────────────────────────────
   emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
 </script>
@@ -195,10 +196,10 @@
             <label for="reason">Reason for Contact</label>
             <select id="reason">
               <option value="">Select one…</option>
-              <option value="freelance">Freelance / Project</option>
-              <option value="job">Job Opportunity</option>
-              <option value="collab">Collaboration</option>
-              <option value="other">Other</option>
+              <option value="Freelance / Project">Freelance / Project</option>
+              <option value="Job Opportunity">Job Opportunity</option>
+              <option value="Collaboration">Collaboration</option>
+              <option value="Other">Other</option>
             </select>
           </div>
           <div class="field">
@@ -274,7 +275,6 @@
 const io = new IntersectionObserver(e => e.forEach(x => { if(x.isIntersecting) x.target.classList.add('in'); }), {threshold:0.08});
 document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 
-// Spinner keyframe injected via JS so it works without a separate stylesheet
 const styleEl = document.createElement('style');
 styleEl.textContent = '@keyframes spin { to { transform: rotate(360deg); } }';
 document.head.appendChild(styleEl);
@@ -306,7 +306,6 @@ async function submitForm() {
   const reason  = document.getElementById('reason').value;
   const message = document.getElementById('message').value.trim();
 
-  // Basic client-side validation
   if (!name)    { showError('Please enter your name.');    return; }
   if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
     showError('Please enter a valid email address.'); return;
@@ -315,18 +314,24 @@ async function submitForm() {
 
   setLoading(true);
 
-  // Template parameters — must match your EmailJS template variables exactly
+  // These variable names MUST match exactly what you use in your EmailJS templates
   const templateParams = {
-    from_name:    name,
-    from_email:   email,
-    reason:       reason || 'Not specified',
-    message:      message,
-    reply_to:     email,
-    to_name:      'Moses',
+    from_name:  name,
+    from_email: email,
+    reason:     reason || 'Not specified',
+    message:    message,
+    reply_to:   email,
+    to_name:    'Moses',
   };
 
   try {
+
+    // Send Template 1 — notification to Moses
     await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, templateParams);
+
+    // Send Template 2 — auto-reply to the sender
+    // Remove this block if you haven't created Template 2 yet
+    await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_AUTOREPLY_ID, templateParams);
 
     // Success — show confirmation panel
     document.getElementById('form-area').style.display = 'none';
@@ -341,6 +346,7 @@ async function submitForm() {
   }
 }
 </script>
+
 <!-- WhatsApp Floating Button -->
 <a href="https://wa.me/254707274060?text=Hi%20Moses%2C%20I%20found%20your%20portfolio%20and%20would%20like%20to%20connect." target="_blank" rel="noopener noreferrer" class="wa-float" aria-label="Chat on WhatsApp">
   <span class="wa-float-label">Chat on WhatsApp</span>
