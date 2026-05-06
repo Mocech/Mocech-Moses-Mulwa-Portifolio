@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Projects — Moses Mulwa · Django & AI Developer</title>
+<meta name="description" content="Live Django, AI, and full-stack projects by Moses Mulwa."/>
+<meta property="og:title" content="Projects — Moses Mulwa · Django & AI Developer"/>
+<meta property="og:description" content="Live systems built, deployed, and operated by Moses Mulwa — for real users. EasyHostels, InvoiceIQ, and more."/>
+<meta property="og:type" content="website"/>
+<meta property="og:image" content="Moses-mulwa.png"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<link rel="icon" type="image/png" href="favicon.png"/>
+<link rel="shortcut icon" href="favicon.ico"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@400,0..1&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="shared.css"/>
+<style>
+/* ── PAGE HERO ── */
+.page-hero { padding: 56px 24px 0; background: #fff; }
+.page-hero-inner { max-width: 1100px; margin: 0 auto; }
+.page-title { font-size: clamp(2rem,4.5vw,3rem); font-weight: 800; color: var(--text); margin-bottom: 10px; }
+.page-sub { font-size: .95rem; color: var(--muted); max-width: 500px; line-height: 1.7; }
+
+/* ── FILTER ── */
+.filter-row { display: flex; flex-wrap: wrap; gap: 8px; padding: 32px 24px 0; max-width: 1100px; margin: 0 auto; }
+.filter-btn {
+  padding: 7px 18px; border-radius: 100px; font-size: .78rem; font-weight: 700;
+  border: 1.5px solid var(--border); background: #fff; color: var(--muted);
+  cursor: pointer; transition: all .2s; font-family: 'Plus Jakarta Sans', sans-serif;
+}
+.filter-btn:hover { border-color: var(--brand); color: var(--brand); }
+.filter-btn.active { background: var(--brand); color: #fff; border-color: var(--brand); }
+
+.divider { height: 1px; background: var(--border); max-width: 1100px; margin: 20px auto 36px; }
+
+/* ── PROJECTS SECTION ── */
+.projects-section { padding: 0 24px 80px; background: #fff; }
+.projects-inner { max-width: 1100px; margin: 0 auto; }
+
+/* ── FEATURED CARD ── Large editorial 2-column layout ── */
+.proj-featured {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  background: #fff;
+  border: 1.5px solid var(--border);
+  border-radius: 22px;
+  overflow: hidden;
+  margin-bottom: 28px;
+  transition: box-shadow .35s, transform .3s;
+}
+.proj-featured:hover {
+  box-shadow: 0 24px 72px rgba(255,98,0,.11);
+  transform: translateY(-4px);
+}
+.proj-featured-img {
+  position: relative; overflow: hidden;
+  min-height: 280px;
+}
+.proj-featured-img img {
+  width: 100%; height: 100%;
+  object-fit: cover; position: absolute; inset: 0;
+  transition: transform .6s ease;
+}
+.proj-featured:hover .proj-featured-img img { transform: scale(1.05); }
+
+/* Gradient overlay so text badges pop */
+.proj-featured-img::after {
+  content: '';
+  position: absolute; inset: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,.28) 0%, transparent 45%, rgba(0,0,0,.5) 100%);
+  pointer-events: none;
+}
+.proj-badges { position: absolute; top: 16px; left: 16px; display: flex; gap: 7px; z-index: 1; }
+.live-badge {
+  display: inline-flex; align-items: center; gap: 5px;
+  padding: 5px 13px; background: var(--brand); color: #fff;
+  border-radius: 100px; font-size: .65rem; font-weight: 700;
+  font-family: 'JetBrains Mono', monospace;
+}
+.live-dot { width: 6px; height: 6px; background: #4fffb0; border-radius: 50%; flex-shrink: 0; }
+.type-badge {
+  display: inline-flex; padding: 5px 13px;
+  background: rgba(255,255,255,.9); color: var(--text);
+  border-radius: 100px; font-size: .65rem; font-weight: 700;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* Body panel */
+.proj-body {
+  padding: 36px 40px;
+  display: flex; flex-direction: column; justify-content: center;
+  gap: 0;
+  background: #fff;
+}
+.proj-number {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: .65rem; font-weight: 700;
+  color: var(--brand); letter-spacing: .1em;
+  text-transform: uppercase; margin-bottom: 12px;
+}
+.proj-title { font-size: 1.25rem; font-weight: 800; color: var(--text); margin-bottom: 10px; line-height: 1.25; }
+.proj-desc { font-size: .875rem; line-height: 1.75; color: var(--muted); margin-bottom: 20px; }
+.proj-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 22px; }
+.proj-links { display: flex; gap: 10px; flex-wrap: wrap; }
+
+/* ── SMALL PROJECT GRID ── */
+.proj-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; }
+
+.proj-small {
+  background: #fff;
+  border: 1.5px solid var(--border);
+  border-radius: 18px; overflow: hidden;
+  display: flex; flex-direction: column;
+  transition: box-shadow .3s, transform .3s;
+}
+.proj-small:hover {
+  box-shadow: 0 14px 44px rgba(255,98,0,.09);
+  transform: translateY(-3px);
+}
+.proj-small-img { height: 160px; position: relative; overflow: hidden; background: var(--off); }
+.proj-small-img img { width: 100%; height: 100%; object-fit: cover; transition: transform .4s; }
+.proj-small:hover .proj-small-img img { transform: scale(1.05); }
+.proj-small-img-placeholder {
+  width: 100%; height: 100%;
+  display: flex; align-items: center; justify-content: center;
+}
+.proj-small-body { padding: 24px; flex: 1; display: flex; flex-direction: column; }
+.proj-small-title { font-size: .95rem; font-weight: 800; color: var(--text); margin-bottom: 7px; }
+.proj-small-desc { font-size: .8rem; line-height: 1.68; color: var(--muted); margin-bottom: 16px; flex: 1; }
+
+.label-row { display: flex; align-items: center; gap: 12px; margin-bottom: 24px; margin-top: 52px; }
+.label-row-title { font-size: 1rem; font-weight: 800; color: var(--text); white-space: nowrap; }
+.label-line { flex: 1; height: 1px; background: var(--border); }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 900px) {
+  .proj-featured { grid-template-columns: 1fr; }
+  .proj-featured-img { min-height: 220px; }
+  .proj-body { padding: 26px 28px; }
+}
+@media (max-width: 767px) {
+  .page-hero { padding: 40px 20px 0; }
+  .filter-row { padding: 24px 20px 0; }
+  .projects-section { padding: 0 20px 60px; }
+  .proj-featured-img { min-height: 180px; }
+  .proj-body { padding: 22px 20px; }
+  .proj-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<header class="nav-wrap dsk">
+  <div class="nav-inner">
+    <a class="nav-logo" href="index.html">
+      <div class="nav-logo-mark">MM</div>
+      <div>
+        <div class="nav-logo-name">Moses Mulwa</div>
+        <div class="nav-logo-role">Python Developer</div>
+      </div>
+    </a>
+    <nav class="nav-links">
+      <a class="nav-link" href="index.html">Home</a>
+      <a class="nav-link act" href="projects.html">Projects</a>
+      <a class="nav-link" href="about.html">About</a>
+      <a class="nav-link" href="contact.html">Contact</a>
+    </nav>
+    <a href="contact.html" class="nav-cta">Hire Me <span style="font-family:'Material Symbols Outlined';font-size:15px;vertical-align:middle;">arrow_forward</span></a>
+  </div>
+</header>
+
+<main>
+
+<section class="page-hero">
+  <div class="page-hero-inner reveal">
+    <span class="section-label">Portfolio</span>
+    <h1 class="page-title">Projects</h1>
+    <p class="page-sub">Live systems built, deployed, and operated by me — for real users.</p>
+  </div>
+</section>
+
+<div class="filter-row reveal">
+  <button class="filter-btn active" onclick="filterCards('all',this)">All</button>
+  <button class="filter-btn" onclick="filterCards('django',this)">Django</button>
+  <button class="filter-btn" onclick="filterCards('ai',this)">AI / LLM</button>
+  <button class="filter-btn" onclick="filterCards('community',this)">Community</button>
+</div>
+<div style="padding:0 24px;"><div class="divider"></div></div>
+
+<section class="projects-section">
+  <div class="projects-inner">
+
+    <!-- ── FEATURED: EasyHostels ── -->
+    <div class="proj-featured project-card reveal" data-tags="django community">
+      <div class="proj-featured-img">
+        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuD7adepHqckC8L8qdeWXcJ_B6NuwHQ4KfujicNUUL1FI-_ViuCOCcM-yE_TjIJITk02AtpPGCMFNvOiwEccL54gAnp292aUHaBhrGjT0w1O1xhqkVwxtzoMCFNn_aVFwtUxSQ6K2NUNxhD0xeIfBAij9UANX40sTVaOb3dOY499Ma2F0XUFHfyqIHmODNYJJwi7tU15IMd57kap-lVm2XGqb0bIZRVTevq5qh7-YwLeMwshqkAYdqg3mWwq68odMPh0jfjFaX1-vcU" alt="EasyHostels"/>
+        <div class="proj-badges">
+          <span class="live-badge"><span class="live-dot"></span> LIVE</span>
+          <span class="type-badge">Featured</span>
+        </div>
+      </div>
+      <div class="proj-body">
+        <div class="proj-number">01 · Featured Project</div>
+        <h3 class="proj-title">EasyHostels — Student Housing Marketplace</h3>
+        <p class="proj-desc">A production marketplace connecting students with verified landlords near University of Embu. 150+ active users. I provision the server, manage Nginx, SSL, DNS, the database, and handle all incidents — end to end.</p>
+        <div class="proj-tags">
+          <span class="tag">Django</span><span class="tag">PostgreSQL</span><span class="tag">Nginx</span><span class="tag">Ubuntu VPS</span><span class="tag">Cloudflare</span>
+        </div>
+        <div class="proj-links">
+          <a href="https://easyhostels.livify.co.ke" target="_blank" rel="noopener noreferrer" class="btn-primary" style="font-size:.78rem;padding:9px 18px;">View Live <span style="font-family:'Material Symbols Outlined';font-size:14px;vertical-align:middle;">open_in_new</span></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── FEATURED: InvoiceIQ ── -->
+    <div class="proj-featured project-card reveal" data-tags="ai django">
+      <div class="proj-featured-img">
+        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3fIwScNIpNtmsf0uu8A2xnxzooFfOFYRtsspettFlzJY6HznRrx1_4o8xw3n-R02rc8l9xk25Po7TIshvj2AAbkp2zIhsyBixY9p6D48sZopHjGlam5NzwnWscg6sWzI6Yd3G6wvtv_RpxZAx0xfcg5ZK_VCYJ6hciFg61sKebe6-xbAKZAd12cGQiZbPYuZlKVOpBia-vzz8i68-GcQtUkbaRUjuhEVe6EgFiP50jYmdmXnTbuYNmRLwVtlHinWluSUiTye2Yx0" alt="InvoiceIQ"/>
+        <div class="proj-badges">
+          <span class="live-badge"><span class="live-dot"></span> LIVE</span>
+          <span class="type-badge">AI / LLM</span>
+        </div>
+      </div>
+      <div class="proj-body">
+        <div class="proj-number">02 · Freelance Contract</div>
+        <h3 class="proj-title">InvoiceIQ — AI Invoice Extraction</h3>
+        <p class="proj-desc">LLM reads uploaded PDFs via OCR and extracts 15+ structured fields instantly. Uncertain results route to a Human-in-the-Loop review dashboard. API response under 300ms. Delivered solo in 4 weeks.</p>
+        <div class="proj-tags">
+          <span class="tag">Llama 3.3</span><span class="tag">OCR</span><span class="tag">Django DRF</span><span class="tag">Celery</span><span class="tag">JWT</span>
+        </div>
+        <div class="proj-links">
+          <a href="https://invoicesq.pythonanywhere.com/" target="_blank" rel="noopener noreferrer" class="btn-primary" style="font-size:.78rem;padding:9px 18px;">View Live <span style="font-family:'Material Symbols Outlined';font-size:14px;vertical-align:middle;">open_in_new</span></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- More Projects -->
+    <div class="label-row reveal">
+      <span class="label-row-title">More Projects</span>
+      <div class="label-line"></div>
+    </div>
+
+    <div class="proj-grid">
+
+      <!-- CU Evaluation System -->
+      <div class="proj-small project-card reveal" data-tags="django community">
+        <div class="proj-small-img">
+          <div class="proj-small-img-placeholder" style="background:linear-gradient(135deg,var(--brand-light),var(--brand-faint));">
+            <span style="font-family:'Material Symbols Outlined';font-size:40px;color:var(--brand);opacity:.35;">assessment</span>
+          </div>
+          <div class="proj-badges" style="top:10px;left:10px;">
+            <span class="live-badge"><span class="live-dot"></span> LIVE</span>
+          </div>
+        </div>
+        <div class="proj-small-body">
+          <div class="proj-tags" style="margin-bottom:10px;">
+            <span class="tag">Django</span><span class="tag">PostgreSQL</span><span class="tag">Community</span>
+          </div>
+          <h3 class="proj-small-title">CU Leadership Evaluation System</h3>
+          <p class="proj-small-desc">Digital evaluation platform for University of Embu Christian Union leadership elections — replacing manual paperwork for a 1,000+ member organization.</p>
+          <a href="https://uoemcu.co.ke/evaluation/" target="_blank" rel="noopener noreferrer" class="btn-primary" style="font-size:.75rem;padding:8px 16px;align-self:flex-start;">View Live <span style="font-family:'Material Symbols Outlined';font-size:13px;vertical-align:middle;">open_in_new</span></a>
+        </div>
+      </div>
+
+      <!-- AgriAI -->
+      <div class="proj-small project-card reveal reveal-d1" data-tags="ai">
+        <div class="proj-small-img">
+          <div class="proj-small-img-placeholder" style="background:linear-gradient(135deg,#eef5ee,#d4ebd4);">
+            <span style="font-family:'Material Symbols Outlined';font-size:40px;color:#2a6b2a;opacity:.3;">agriculture</span>
+          </div>
+          <div class="proj-badges" style="top:10px;left:10px;">
+            <span class="type-badge">AI · Mozilla RCC</span>
+          </div>
+        </div>
+        <div class="proj-small-body">
+          <div class="proj-tags" style="margin-bottom:10px;">
+            <span class="tag">AI / ML</span><span class="tag">Python</span><span class="tag">Django</span>
+          </div>
+          <h3 class="proj-small-title">Agricultural Decision Support System</h3>
+          <p class="proj-small-desc">AI-driven tool helping smallholder farmers make data-informed crop decisions. Ranked 2nd out of 30 teams at the Mozilla Responsible Computing Challenge.</p>
+          <span class="pill" style="font-size:.65rem;padding:4px 10px;align-self:flex-start;">🏆 Mozilla RCC Runner-Up</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- CTA -->
+    <div style="text-align:center;margin-top:64px;padding:48px 24px;background:var(--brand-faint);border-radius:20px;border:1.5px solid var(--brand-light);" class="reveal">
+      <h3 style="font-size:1.3rem;font-weight:800;color:var(--text);margin-bottom:8px;">Interested in working together?</h3>
+      <p style="font-size:.875rem;color:var(--muted);margin-bottom:24px;">I'm available for freelance contracts and full-time roles.</p>
+      <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
+        <a href="contact.html" class="btn-primary">Get In Touch</a>
+        <a href="Moses_Mulwa_Master_CV.pdf" download class="btn-outline"><span style="font-family:'Material Symbols Outlined';font-size:15px;vertical-align:middle;">download</span> Download CV</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer dsk">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px;">
+          <div class="nav-logo-mark" style="width:32px;height:32px;font-size:.7rem;">MM</div>
+          <div>
+            <div class="footer-brand-name">Moses Mulwa</div>
+            <div class="footer-brand-sub">Django · AI · Nairobi, Kenya</div>
+          </div>
+        </div>
+        <div style="display:flex;gap:16px;margin-top:16px;">
+          <a href="https://github.com/mocech" target="_blank" rel="noopener noreferrer" class="footer-link" style="margin-bottom:0;">GitHub</a>
+          <a href="https://www.linkedin.com/in/moses-francis-8a590b251/" target="_blank" rel="noopener noreferrer" class="footer-link" style="margin-bottom:0;">LinkedIn</a>
+          <a href="mailto:mosesfrancis018@gmail.com" class="footer-link" style="margin-bottom:0;">Email</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-links-title">Navigate</div>
+        <a href="index.html" class="footer-link">Home</a>
+        <a href="projects.html" class="footer-link">Projects</a>
+        <a href="about.html" class="footer-link">About</a>
+        <a href="contact.html" class="footer-link">Contact</a>
+      </div>
+      <div>
+        <div class="footer-links-title">Live Apps</div>
+        <a href="https://easyhostels.livify.co.ke" target="_blank" rel="noopener noreferrer" class="footer-link">EasyHostels</a>
+        <a href="https://invoicesq.pythonanywhere.com/" target="_blank" rel="noopener noreferrer" class="footer-link">InvoiceIQ</a>
+        <a href="https://uoemcu.co.ke/evaluation/" target="_blank" rel="noopener noreferrer" class="footer-link">CU Evaluation</a>
+      </div>
+    </div>
+    <div class="footer-copy">
+      <span>© 2026 Moses Mulwa · Nairobi, Kenya</span>
+      <span class="mono" style="font-size:.68rem;">Django · Python · VPS</span>
+    </div>
+  </div>
+</footer>
+
+<nav class="mbn">
+  <a href="index.html" class="mbn-item"><span class="mbi">home</span><span>Home</span></a>
+  <a href="projects.html" class="mbn-item act"><span class="mbi">work</span><span>Projects</span></a>
+  <a href="about.html" class="mbn-item"><span class="mbi">person</span><span>About</span></a>
+  <a href="contact.html" class="mbn-item"><span class="mbi">mail</span><span>Contact</span></a>
+</nav>
+
+<script>
+const io = new IntersectionObserver(e => e.forEach(x => { if(x.isIntersecting) x.target.classList.add('in'); }), {threshold:0.08});
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+function filterCards(tag, btn) {
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.project-card').forEach(card => {
+    const tags = card.dataset.tags || '';
+    const show = tag === 'all' || tags.includes(tag);
+    card.style.transition = 'opacity .3s, transform .3s';
+    if (show) { card.style.opacity = '1'; card.style.display = ''; }
+    else { card.style.opacity = '0'; setTimeout(() => { if (!tags.includes(tag) && tag !== 'all') card.style.display = 'none'; }, 280); }
+  });
+}
+</script>
+<!-- WhatsApp Floating Button -->
+<a href="https://wa.me/254707274060?text=Hi%20Moses%2C%20I%20found%20your%20portfolio%20and%20would%20like%20to%20connect." target="_blank" rel="noopener noreferrer" class="wa-float" aria-label="Chat on WhatsApp">
+  <span class="wa-float-label">Chat on WhatsApp</span>
+  <div class="wa-float-btn">
+    <div class="wa-float-pulse"></div>
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="#fff" width="28" height="28"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </div>
+</a>
+</body>
+</html>
