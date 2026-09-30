@@ -196,6 +196,33 @@
 .lb-x{top:12px;right:12px}
 .lb-nav{top:calc(34vh - 20px)}
 .lb-prev{left:12px}.lb-next{right:12px}
+/* ── MOBILE HERO FIXES ── */
+@media (max-width: 767px) {
+  .hero-inner { gap: 20px; }
+  .hero-sub { margin-bottom: 20px; }
+  .hero-actions { margin-bottom: 20px; }
+
+  .hero-actions { flex-direction: column; gap: 10px; width: 100%; }
+  .hero-actions .btn-primary,
+  .hero-actions .btn-wa {
+    width: 100%;
+    min-height: 48px;
+    justify-content: center;
+    font-size: .95rem;
+  }
+
+  .hero-show { width: 100%; padding: 0; }
+  .hero-show::before { display: none; }
+  .show-slide { border-radius: 16px; box-shadow: 0 8px 24px rgba(20,20,40,.12); }
+  .show-bar { padding: 8px 12px; }
+  .show-bar i { display: none; }
+  .show-bar span { margin-left: 0; }
+  .show-shot { aspect-ratio: 2/1; }
+  .show-dots { position: static; margin-top: 12px; }
+
+  .wa-float { transition: opacity .25s, transform .25s; }
+  .wa-float.wa-hide { opacity: 0; transform: translateY(10px); pointer-events: none; }
+}
 </style>
 </head>
 <body>
@@ -253,7 +280,7 @@
         </figure>
         <figure class="show-slide" style="margin:0">
           <div class="show-bar"><i></i><i></i><i></i><span>InvoiceIQ</span></div>
-          <div class="show-shot"><b><svg viewBox="0 0 64 64" width="72" height="72" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><path d="M16 6h32v52l-6-4-5 4-5-4-5 4-5-4-6 4z"/><path d="M24 20h16M24 30h16M24 40h10"/></svg></b><img src="shot-invoiceiq.png" alt="InvoiceIQ website screenshot" onerror="this.remove()"/></div>
+          <div class="show-shot"><b><svg viewBox="0 0 64 64" width="72" height="72" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><path d="M16 6h32v52l-6-4-5 4-5-4-5 4-5-4-6 4z"/><path d="M24 20h16M24 30h16M24 40h10"/></svg></b><img src="shot-invoiceiq.png" alt="InvoiceIQ website screenshot" loading="lazy" onerror="this.remove()"/></div>
           <figcaption class="show-cap"><strong>InvoiceIQ</strong><p>Reads invoices automatically and passes unclear ones to a person to check.</p><a href="https://invoicesq.pythonanywhere.com/" target="_blank" rel="noopener noreferrer">View live site &rarr;</a></figcaption>
         </figure>
       </div>
@@ -486,7 +513,7 @@ document.querySelectorAll('.reveal').forEach(el => io.observe(el));
   var box=document.getElementById('heroShow'); if(!box) return;
   var slides=box.querySelectorAll('.show-slide'), dots=box.querySelectorAll('.show-dots button'), i=0, t=null;
   function go(n){ slides[i].classList.remove('active'); dots[i].classList.remove('on'); i=(n+slides.length)%slides.length; slides[i].classList.add('active'); dots[i].classList.add('on'); }
-  function start(){ if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) return; stop(); t=setInterval(function(){go(i+1)},5000); }
+  function start(){ if(window.matchMedia('(prefers-reduced-motion: reduce)').matches || window.matchMedia('(max-width: 767px)').matches) return; stop(); t=setInterval(function(){go(i+1)},5000); }
   function stop(){ if(t){clearInterval(t); t=null;} }
   dots.forEach(function(d,n){ d.addEventListener('click',function(){go(n);start();}); });
   box.addEventListener('mouseenter',stop); box.addEventListener('mouseleave',start);
@@ -533,6 +560,15 @@ document.addEventListener('click',function(e){
   var p=b.parentNode, s=p.querySelector('.pc-short'), f=p.querySelector('.pc-full'), open=f.hidden;
   s.hidden=open; f.hidden=!open; b.textContent=open?'Show less':'Read more'; b.setAttribute('aria-expanded',open);
 });
+</script>
+<script>
+(function(){
+  var hero=document.querySelector('.hero'), wa=document.querySelector('.wa-float');
+  if(!hero||!wa||!('IntersectionObserver' in window)) return;
+  new IntersectionObserver(function(e){
+    wa.classList.toggle('wa-hide', e[0].isIntersecting);
+  },{threshold:0.15}).observe(hero);
+})();
 </script>
 </body>
 </html>
