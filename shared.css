@@ -69,6 +69,7 @@ body {
   display: flex; align-items: center; justify-content: center;
   letter-spacing: -.02em; flex-shrink: 0;
 }
+.nav-logo-img { height: 40px; width: auto; max-width: 64px; object-fit: contain; display: block; flex-shrink: 0; }
 .nav-logo-name { font-weight: 800; font-size: .95rem; color: var(--text); }
 .nav-logo-role { font-size: .6rem; color: var(--light); font-family: 'JetBrains Mono', monospace; text-transform: uppercase; letter-spacing: .1em; }
 
@@ -162,6 +163,18 @@ body {
   transition: background .2s, color .2s;
 }
 .btn-outline:hover { background: var(--brand); color: #fff; }
+
+/* WhatsApp-branded button */
+.btn-wa {
+  display: inline-flex; align-items: center; gap: 9px;
+  background: #25D366; color: #fff;
+  font-weight: 700; font-size: .85rem;
+  padding: 12px 24px; border-radius: 10px;
+  text-decoration: none; border: 2px solid #25D366; cursor: pointer;
+  transition: background .2s, border-color .2s, transform .15s, box-shadow .2s;
+}
+.btn-wa:hover { background: #1EBE5A; border-color: #1EBE5A; transform: translateY(-1px); box-shadow: 0 8px 22px rgba(37,211,102,.35); }
+
 
 /* ── SECTION LABEL ── */
 .section-label {
@@ -274,7 +287,7 @@ body {
 /* Fluid container padding */
 @media (max-width: 480px) {
   .container { padding: 0 16px; }
-  .btn-primary, .btn-outline { font-size: .8rem; padding: 11px 20px; }
+  .btn-primary, .btn-outline, .btn-wa { font-size: .8rem; padding: 11px 20px; }
 }
 
 /* Footer responsive */

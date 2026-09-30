@@ -3,15 +3,14 @@
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<title>Projects — Moses Mulwa · Django & AI Developer</title>
-<meta name="description" content="Live Django, AI, and full-stack projects by Moses Mulwa."/>
-<meta property="og:title" content="Projects — Moses Mulwa · Django & AI Developer"/>
-<meta property="og:description" content="Live systems built, deployed, and operated by Moses Mulwa — for real users. EasyHostels, InvoiceIQ, and more."/>
+<title>Portfolio — MoxienTech</title>
+<meta name="description" content="Real websites and apps by MoxienTech that help communities, students and businesses."/>
+<meta property="og:title" content="Portfolio — MoxienTech"/>
+<meta property="og:description" content="Problems solved for real people: the UoEm Christian Union website, EasyHostels student housing, InvoiceIQ and more."/>
 <meta property="og:type" content="website"/>
-<meta property="og:image" content="Moses-mulwa.png"/>
+<meta property="og:image" content="Moses-mulwa.jpg"/>
 <meta name="twitter:card" content="summary_large_image"/>
-<link rel="icon" type="image/png" href="favicon.png"/>
-<link rel="shortcut icon" href="favicon.ico"/>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23FF6200'/%3E%3Ctext x='32' y='42' font-size='28' font-weight='700' font-family='Arial' fill='white' text-anchor='middle'%3EMT%3C/text%3E%3C/svg%3E"/>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@400,0..1&display=swap" rel="stylesheet"/>
 <link rel="stylesheet" href="shared.css"/>
@@ -147,6 +146,43 @@
   .proj-body { padding: 22px 20px; }
   .proj-grid { grid-template-columns: 1fr; }
 }
+.pgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:20px;align-items:stretch}
+.pcard{background:#fff;border:1.5px solid var(--border);border-radius:16px;padding:0;overflow:hidden;display:flex;flex-direction:column;transition:box-shadow .3s,transform .3s,border-color .3s}
+.pcard:hover{box-shadow:0 12px 30px rgba(255,98,0,.12);transform:translateY(-2px);border-color:var(--brand-light)}
+.pc-head{display:grid;grid-template-columns:100%;margin:0}
+.pc-img{grid-area:1/1;position:relative;display:block;width:100%;aspect-ratio:2.4/1;border:0;border-radius:0;padding:0;cursor:zoom-in;overflow:hidden;background:linear-gradient(135deg,var(--brand-light),var(--brand-faint))}
+.pc-img::after{content:'';position:absolute;inset:0;background:linear-gradient(0deg,rgba(15,15,25,.45) 0%,transparent 55%);pointer-events:none}
+.pc-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top;transition:transform .5s}
+.pcard:hover .pc-img img{transform:scale(1.04)}
+.pc-ph{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:var(--brand);opacity:.4}
+.pc-zoom{position:absolute;right:10px;bottom:10px;z-index:2;width:26px;height:26px;border-radius:8px;background:rgba(20,20,30,.72);color:#fff;font-size:.8rem;display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity .25s}
+.pc-img:hover .pc-zoom,.pc-img:focus-visible .pc-zoom{opacity:1}
+.pc-meta{display:contents}
+.pc-badges{grid-area:1/1;align-self:end;justify-self:start;position:relative;z-index:2;display:flex;flex-wrap:wrap;gap:5px;margin:0 46px 10px 10px;pointer-events:none}
+.pc-badge{font-size:.6rem;font-weight:700;padding:3px 9px;border-radius:100px;font-family:'JetBrains Mono',monospace;background:var(--brand);color:#fff;box-shadow:0 2px 8px rgba(0,0,0,.18)}
+.pc-badge.grey{background:#6b7280}.pc-badge.light{background:rgba(255,255,255,.94);color:#4b5563}
+.pc-title{grid-row:2;grid-column:1;padding:14px 18px 0;font-size:1rem;font-weight:800;color:var(--text);line-height:1.3}
+.pc-desc{font-size:.83rem;line-height:1.6;color:var(--muted);margin:6px 18px 12px}
+.pc-more{border:0;background:none;padding:0;font:inherit;font-weight:700;color:var(--brand);cursor:pointer}
+.pc-more:hover{text-decoration:underline}
+.pc-tags{display:flex;flex-wrap:wrap;gap:5px;margin:0 18px 14px}
+.pc-actions{margin:auto 18px 0;padding:0 0 16px}
+.pc-actions a{box-sizing:border-box;min-height:36px;display:inline-flex;align-items:center}
+@media (max-width:600px){.pgrid{grid-template-columns:1fr;gap:16px}.pc-img{aspect-ratio:2.2/1}.pc-zoom{opacity:1}}
+.lb{position:fixed;inset:0;z-index:9999;background:rgba(15,15,25,.86);display:flex;align-items:center;justify-content:center;padding:20px}
+.lb[hidden]{display:none}
+.lb-box{position:relative;width:min(1000px,100%);max-height:100%;display:flex;flex-direction:column;background:#fff;border-radius:18px;overflow:hidden}
+.lb-stage{position:relative;background:#111;display:flex;align-items:center;justify-content:center;min-height:200px;max-height:68vh;overflow:auto}
+.lb-stage img{display:block;max-width:100%;max-height:68vh;object-fit:contain}
+.lb-ph{display:none;flex-direction:column;align-items:center;gap:12px;padding:60px 20px;color:#fff;font-size:.85rem;opacity:.8}
+.lb-cap{padding:16px 22px 18px}
+.lb-cap strong{display:block;font-size:1rem;font-weight:800;color:var(--text);margin-bottom:4px}
+.lb-cap p{font-size:.85rem;line-height:1.6;color:var(--muted);margin-bottom:10px}
+.lb-cap a{font-size:.8rem;font-weight:700;color:var(--brand);text-decoration:none}
+.lb-x,.lb-nav{position:absolute;z-index:3;border:0;cursor:pointer;background:rgba(255,255,255,.92);color:#111;border-radius:50%;width:40px;height:40px;font-size:1.5rem;line-height:1;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 14px rgba(0,0,0,.25)}
+.lb-x{top:12px;right:12px}
+.lb-nav{top:calc(34vh - 20px)}
+.lb-prev{left:12px}.lb-next{right:12px}
 </style>
 </head>
 <body>
@@ -154,19 +190,18 @@
 <header class="nav-wrap dsk">
   <div class="nav-inner">
     <a class="nav-logo" href="index.html">
-      <div class="nav-logo-mark">MM</div>
+      <img class="nav-logo-img" src="logo.svg" alt="MoxienTech logo" width="40" height="40" onerror="if(!this.dataset.t){this.dataset.t=1;this.src='logo.png'}else{this.style.display='none';this.nextElementSibling.style.display='flex'}"/><div class="nav-logo-mark" style="display:none">MT</div>
       <div>
-        <div class="nav-logo-name">Moses Mulwa</div>
-        <div class="nav-logo-role">Python Developer</div>
+        <div class="nav-logo-name">MoxienTech</div>
       </div>
     </a>
     <nav class="nav-links">
       <a class="nav-link" href="index.html">Home</a>
-      <a class="nav-link act" href="projects.html">Projects</a>
+      <a class="nav-link act" href="projects.html">Portfolio</a>
       <a class="nav-link" href="about.html">About</a>
       <a class="nav-link" href="contact.html">Contact</a>
     </nav>
-    <a href="contact.html" class="nav-cta">Hire Me <span style="font-family:'Material Symbols Outlined';font-size:15px;vertical-align:middle;">arrow_forward</span></a>
+    <a href="contact.html" class="nav-cta">Start a Project <span style="font-family:'Material Symbols Outlined';font-size:15px;vertical-align:middle;">arrow_forward</span></a>
   </div>
 </header>
 
@@ -174,16 +209,16 @@
 
 <section class="page-hero">
   <div class="page-hero-inner reveal">
-    <span class="section-label">Portfolio</span>
-    <h1 class="page-title">Projects</h1>
-    <p class="page-sub">Live systems built, deployed, and operated by me — for real users.</p>
+    <span class="section-label">Recent Work</span>
+    <h1 class="page-title">Portfolio</h1>
+    <p class="page-sub">A few of the problems I have solved for real people and organisations.</p>
   </div>
 </section>
 
 <div class="filter-row reveal">
   <button class="filter-btn active" onclick="filterCards('all',this)">All</button>
-  <button class="filter-btn" onclick="filterCards('django',this)">Django</button>
-  <button class="filter-btn" onclick="filterCards('ai',this)">AI / LLM</button>
+  <button class="filter-btn" onclick="filterCards('websites',this)">Websites &amp; Platforms</button>
+  <button class="filter-btn" onclick="filterCards('smart',this)">Smart Tools</button>
   <button class="filter-btn" onclick="filterCards('community',this)">Community</button>
 </div>
 <div style="padding:0 24px;"><div class="divider"></div></div>
@@ -191,107 +226,63 @@
 <section class="projects-section">
   <div class="projects-inner">
 
-    <!-- ── FEATURED: EasyHostels ── -->
-    <div class="proj-featured project-card reveal" data-tags="django community">
-      <div class="proj-featured-img">
-        <img src="hostel.jpg" alt="EasyHostels"/>
-        <div class="proj-badges">
-          <span class="live-badge"><span class="live-dot"></span> LIVE</span>
-          <span class="type-badge">Featured</span>
-        </div>
-      </div>
-      <div class="proj-body">
-        <div class="proj-number">01 · Featured Project</div>
-        <h3 class="proj-title">EasyHostels — Student Housing Marketplace</h3>
-        <p class="proj-desc">A production marketplace connecting students with verified landlords near University of Embu. 150+ active users. I provision the server, manage Nginx, SSL, DNS, the database, and handle all incidents — end to end.</p>
-        <div class="proj-tags">
-          <span class="tag">Django</span><span class="tag">PostgreSQL</span><span class="tag">Nginx</span><span class="tag">Ubuntu VPS</span><span class="tag">Cloudflare</span>
-        </div>
-        <div class="proj-links">
-          <a href="https://github.com/Mocech/" target="_blank" rel="noopener noreferrer" class="btn-primary" style="font-size:.78rem;padding:9px 18px;">View Live <span style="font-family:'Material Symbols Outlined';font-size:14px;vertical-align:middle;">open_in_new</span></a>
-        </div>
-      </div>
-    </div>
-
-    <!-- ── FEATURED: InvoiceIQ ── -->
-    <div class="proj-featured project-card reveal" data-tags="ai django">
-      <div class="proj-featured-img">
-        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3fIwScNIpNtmsf0uu8A2xnxzooFfOFYRtsspettFlzJY6HznRrx1_4o8xw3n-R02rc8l9xk25Po7TIshvj2AAbkp2zIhsyBixY9p6D48sZopHjGlam5NzwnWscg6sWzI6Yd3G6wvtv_RpxZAx0xfcg5ZK_VCYJ6hciFg61sKebe6-xbAKZAd12cGQiZbPYuZlKVOpBia-vzz8i68-GcQtUkbaRUjuhEVe6EgFiP50jYmdmXnTbuYNmRLwVtlHinWluSUiTye2Yx0" alt="InvoiceIQ"/>
-        <div class="proj-badges">
-          <span class="live-badge"><span class="live-dot"></span> LIVE</span>
-          <span class="type-badge">AI / LLM</span>
-        </div>
-      </div>
-      <div class="proj-body">
-        <div class="proj-number">02 · Freelance Contract</div>
-        <h3 class="proj-title">InvoiceIQ — AI Invoice Extraction</h3>
-        <p class="proj-desc">LLM reads uploaded PDFs via OCR and extracts 15+ structured fields instantly. Uncertain results route to a Human-in-the-Loop review dashboard. API response under 300ms. Delivered solo in 4 weeks.</p>
-        <div class="proj-tags">
-          <span class="tag">Llama 3.3</span><span class="tag">OCR</span><span class="tag">Django DRF</span><span class="tag">Celery</span><span class="tag">JWT</span>
-        </div>
-        <div class="proj-links">
-          <a href="https://invoicesq.pythonanywhere.com/" target="_blank" rel="noopener noreferrer" class="btn-primary" style="font-size:.78rem;padding:9px 18px;">View Live <span style="font-family:'Material Symbols Outlined';font-size:14px;vertical-align:middle;">open_in_new</span></a>
-        </div>
-      </div>
-    </div>
-
-    <!-- More Projects -->
-    <div class="label-row reveal">
-      <span class="label-row-title">More Projects</span>
-      <div class="label-line"></div>
-    </div>
-
-    <div class="proj-grid">
-
-      <!-- CU Evaluation System -->
-      <div class="proj-small project-card reveal" data-tags="django community">
-        <div class="proj-small-img">
-          <div class="proj-small-img-placeholder" style="background:linear-gradient(135deg,var(--brand-light),var(--brand-faint));">
-            <span style="font-family:'Material Symbols Outlined';font-size:40px;color:var(--brand);opacity:.35;">assessment</span>
-          </div>
-          <div class="proj-badges" style="top:10px;left:10px;">
-            <span class="live-badge"><span class="live-dot"></span> LIVE</span>
+    <div class="pgrid">
+      <article class="pcard reveal" data-tags="websites community">
+        <div class="pc-head">
+          <button type="button" class="pc-img" data-title="UoEm Christian Union — Community Website" data-desc="The online home of the University of Embu Christian Union. Members join ministries, register for events and take part in elections, while leaders manage it all in one place." data-link="https://uoemcu.co.ke/" aria-label="View screenshot: UoEm Christian Union — Community Website">
+            <span class="pc-ph"><svg viewBox="0 0 64 64" width="30" height="30" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><path d="M32 6v10M27 11h10M32 16 14 30v26h36V30z"/><path d="M26 56V42a6 6 0 0 1 12 0v14"/></svg></span>
+            <img src="shot-cu.png" alt="UoEm Christian Union website" loading="lazy" onerror="this.remove()"/>
+            <span class="pc-zoom">&#10530;</span>
+          </button>
+          <div class="pc-meta">
+            <div class="pc-badges"><span class="pc-badge ">LIVE</span></div>
+            <h3 class="pc-title">UoEm Christian Union — Community Website</h3>
           </div>
         </div>
-        <div class="proj-small-body">
-          <div class="proj-tags" style="margin-bottom:10px;">
-            <span class="tag">Django</span><span class="tag">PostgreSQL</span><span class="tag">Community</span>
-          </div>
-          <h3 class="proj-small-title">CU Leadership Evaluation System</h3>
-          <p class="proj-small-desc">Digital evaluation platform for University of Embu Christian Union leadership elections — replacing manual paperwork for a 1,000+ member organization.</p>
-          <a href="https://uoemcu.co.ke/evaluation/" target="_blank" rel="noopener noreferrer" class="btn-primary" style="font-size:.75rem;padding:8px 16px;align-self:flex-start;">View Live <span style="font-family:'Material Symbols Outlined';font-size:13px;vertical-align:middle;">open_in_new</span></a>
-        </div>
-      </div>
-
-      <!-- AgriAI -->
-      <div class="proj-small project-card reveal reveal-d1" data-tags="ai">
-        <div class="proj-small-img">
-          <div class="proj-small-img-placeholder" style="background:linear-gradient(135deg,#eef5ee,#d4ebd4);">
-            <span style="font-family:'Material Symbols Outlined';font-size:40px;color:#2a6b2a;opacity:.3;">agriculture</span>
-          </div>
-          <div class="proj-badges" style="top:10px;left:10px;">
-            <span class="type-badge">AI · Mozilla RCC</span>
+        <p class="pc-desc"><span class="pc-short">The online home of the University of Embu Christian Union. Members join… </span><span class="pc-full" hidden>The online home of the University of Embu Christian Union. Members join ministries, register for events and take part in elections, while leaders manage it all in one place. </span><button type="button" class="pc-more" aria-expanded="false">Read more</button></p>
+        <div class="pc-tags"><span class="tag">Ministries</span><span class="tag">Events</span><span class="tag">Elections</span></div>
+        <div class="pc-actions"><a href="https://uoemcu.co.ke/" target="_blank" rel="noopener noreferrer" class="btn-primary" style="font-size:.75rem;padding:8px 16px;">View live site &#8599;</a></div>
+      </article>
+      <article class="pcard reveal" data-tags="smart websites">
+        <div class="pc-head">
+          <button type="button" class="pc-img" data-title="InvoiceIQ — Invoices Read Automatically" data-desc="Upload an invoice and it picks out more than 15 key details within moments. Anything unclear goes to a person to check, so mistakes do not slip through." data-link="https://invoicesq.pythonanywhere.com/" aria-label="View screenshot: InvoiceIQ — Invoices Read Automatically">
+            <span class="pc-ph"><svg viewBox="0 0 64 64" width="30" height="30" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><path d="M16 6h32v52l-6-4-5 4-5-4-5 4-5-4-6 4z"/><path d="M24 20h16M24 30h16M24 40h10"/></svg></span>
+            <img src="shot-invoiceiq.png" alt="InvoiceIQ invoice reading tool" loading="lazy" onerror="this.onerror=null;this.src='https://lh3.googleusercontent.com/aida-public/AB6AXuA3fIwScNIpNtmsf0uu8A2xnxzooFfOFYRtsspettFlzJY6HznRrx1_4o8xw3n-R02rc8l9xk25Po7TIshvj2AAbkp2zIhsyBixY9p6D48sZopHjGlam5NzwnWscg6sWzI6Yd3G6wvtv_RpxZAx0xfcg5ZK_VCYJ6hciFg61sKebe6-xbAKZAd12cGQiZbPYuZlKVOpBia-vzz8i68-GcQtUkbaRUjuhEVe6EgFiP50jYmdmXnTbuYNmRLwVtlHinWluSUiTye2Yx0'"/>
+            <span class="pc-zoom">&#10530;</span>
+          </button>
+          <div class="pc-meta">
+            <div class="pc-badges"><span class="pc-badge ">LIVE</span></div>
+            <h3 class="pc-title">InvoiceIQ — Invoices Read Automatically</h3>
           </div>
         </div>
-        <div class="proj-small-body">
-          <div class="proj-tags" style="margin-bottom:10px;">
-            <span class="tag">AI / ML</span><span class="tag">Python</span><span class="tag">Django</span>
+        <p class="pc-desc"><span class="pc-short">Upload an invoice and it picks out more than 15 key details within moments… </span><span class="pc-full" hidden>Upload an invoice and it picks out more than 15 key details within moments. Anything unclear goes to a person to check, so mistakes do not slip through. </span><button type="button" class="pc-more" aria-expanded="false">Read more</button></p>
+        <div class="pc-tags"><span class="tag">Saves Time</span><span class="tag">Automation</span><span class="tag">Fewer Errors</span></div>
+        <div class="pc-actions"><a href="https://invoicesq.pythonanywhere.com/" target="_blank" rel="noopener noreferrer" class="btn-primary" style="font-size:.75rem;padding:8px 16px;">View live site &#8599;</a></div>
+      </article>
+      <article class="pcard reveal" data-tags="websites community">
+        <div class="pc-head">
+          <button type="button" class="pc-img" data-title="EasyHostels — Find Student Housing Easily" data-desc="Helped students near University of Embu find safe, verified places to rent, and helped landlords reach the right tenants. Over 150 people used it." aria-label="View screenshot: EasyHostels — Find Student Housing Easily">
+            <span class="pc-ph"><svg viewBox="0 0 64 64" width="30" height="30" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><path d="M12 56V10h28v46M40 24h12v32M20 18h4M28 18h4M20 28h4M28 28h4M20 38h4M28 38h4M24 56V46"/></svg></span>
+            <img src="shot-easyhostels.png" alt="EasyHostels student housing" loading="lazy" onerror="this.onerror=null;this.src='hostel.jpg'"/>
+            <span class="pc-zoom">&#10530;</span>
+          </button>
+          <div class="pc-meta">
+            <div class="pc-badges"><span class="pc-badge grey">Completed</span></div>
+            <h3 class="pc-title">EasyHostels — Find Student Housing Easily</h3>
           </div>
-          <h3 class="proj-small-title">Agricultural Decision Support System</h3>
-          <p class="proj-small-desc">AI-driven tool helping smallholder farmers make data-informed crop decisions. Ranked 2nd out of 30 teams at the Mozilla Responsible Computing Challenge.</p>
-          <span class="pill" style="font-size:.65rem;padding:4px 10px;align-self:flex-start;">🏆 Mozilla RCC Runner-Up</span>
         </div>
-      </div>
-
+        <p class="pc-desc"><span class="pc-short">Helped students near University of Embu find safe, verified places to rent, and… </span><span class="pc-full" hidden>Helped students near University of Embu find safe, verified places to rent, and helped landlords reach the right tenants. Over 150 people used it. </span><button type="button" class="pc-more" aria-expanded="false">Read more</button></p>
+        <div class="pc-tags"><span class="tag">Housing</span><span class="tag">Students</span><span class="tag">Verified Landlords</span></div>
+        <div class="pc-actions"><a href="contact.html" class="btn-outline" style="font-size:.75rem;padding:8px 16px;">Get something like this &rarr;</a></div>
+      </article>
     </div>
 
     <!-- CTA -->
     <div style="text-align:center;margin-top:64px;padding:48px 24px;background:var(--brand-faint);border-radius:20px;border:1.5px solid var(--brand-light);" class="reveal">
       <h3 style="font-size:1.3rem;font-weight:800;color:var(--text);margin-bottom:8px;">Interested in working together?</h3>
-      <p style="font-size:.875rem;color:var(--muted);margin-bottom:24px;">I'm available for freelance contracts and full-time roles.</p>
+      <p style="font-size:.875rem;color:var(--muted);margin-bottom:24px;">Tell me what you need and I'll reply within 24 hours.</p>
       <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
-        <a href="contact.html" class="btn-primary">Get In Touch</a>
-        <a href="Moses_Mulwa_Master_CV.pdf" download class="btn-outline"><span style="font-family:'Material Symbols Outlined';font-size:15px;vertical-align:middle;">download</span> Download CV</a>
+        <a href="contact.html" class="btn-primary">Start a Project</a>
       </div>
     </div>
 
@@ -305,42 +296,39 @@
     <div class="footer-top">
       <div>
         <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px;">
-          <div class="nav-logo-mark" style="width:32px;height:32px;font-size:.7rem;">MM</div>
+          <img class="nav-logo-img" src="logo.svg" alt="MoxienTech logo" style="height:32px" onerror="if(!this.dataset.t){this.dataset.t=1;this.src='logo.png'}else{this.style.display='none';this.nextElementSibling.style.display='flex'}"/><div class="nav-logo-mark" style="display:none;width:32px;height:32px;font-size:.7rem;">MT</div>
           <div>
-            <div class="footer-brand-name">Moses Mulwa</div>
-            <div class="footer-brand-sub">Django · AI · Nairobi, Kenya</div>
+            <div class="footer-brand-name">MoxienTech</div>
           </div>
         </div>
         <div style="display:flex;gap:16px;margin-top:16px;">
-          <a href="https://github.com/mocech" target="_blank" rel="noopener noreferrer" class="footer-link" style="margin-bottom:0;">GitHub</a>
           <a href="https://www.linkedin.com/in/moses-francis-8a590b251/" target="_blank" rel="noopener noreferrer" class="footer-link" style="margin-bottom:0;">LinkedIn</a>
-          <a href="mailto:mosesfrancis018@gmail.com" class="footer-link" style="margin-bottom:0;">Email</a>
+          <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=mosesfrancis018@gmail.com&amp;su=Project%20enquiry&amp;body=Hi%20Moses%2C%0A%0AI%20would%20like%20to%20talk%20about%20a%20project.%0A%0A" target="_blank" rel="noopener noreferrer" class="footer-link" style="margin-bottom:0;">Email</a>
         </div>
       </div>
       <div>
         <div class="footer-links-title">Navigate</div>
         <a href="index.html" class="footer-link">Home</a>
-        <a href="projects.html" class="footer-link">Projects</a>
+        <a href="projects.html" class="footer-link">Portfolio</a>
         <a href="about.html" class="footer-link">About</a>
         <a href="contact.html" class="footer-link">Contact</a>
       </div>
       <div>
-        <div class="footer-links-title">Live Apps</div>
-        <a href="https://github.com/Mocech/" target="_blank" rel="noopener noreferrer" class="footer-link">EasyHostels</a>
+        <div class="footer-links-title">Recent Work</div>
+        <a href="https://uoemcu.co.ke/" target="_blank" rel="noopener noreferrer" class="footer-link">UoEm CU Website</a>
         <a href="https://invoicesq.pythonanywhere.com/" target="_blank" rel="noopener noreferrer" class="footer-link">InvoiceIQ</a>
-        <a href="https://uoemcu.co.ke/evaluation/" target="_blank" rel="noopener noreferrer" class="footer-link">CU Evaluation</a>
       </div>
     </div>
     <div class="footer-copy">
-      <span>© 2026 Moses Mulwa · Nairobi, Kenya</span>
-      <span class="mono" style="font-size:.68rem;">Django · Python · VPS</span>
+      <span>© 2026 MoxienTech · Nairobi, Kenya</span>
+      <span class="mono" style="font-size:.68rem;">Built in Nairobi, Kenya</span>
     </div>
   </div>
 </footer>
 
 <nav class="mbn">
   <a href="index.html" class="mbn-item"><span class="mbi">home</span><span>Home</span></a>
-  <a href="projects.html" class="mbn-item act"><span class="mbi">work</span><span>Projects</span></a>
+  <a href="projects.html" class="mbn-item act"><span class="mbi">work</span><span>Portfolio</span></a>
   <a href="about.html" class="mbn-item"><span class="mbi">person</span><span>About</span></a>
   <a href="contact.html" class="mbn-item"><span class="mbi">mail</span><span>Contact</span></a>
 </nav>
@@ -352,7 +340,7 @@ document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 function filterCards(tag, btn) {
   document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
   btn.classList.add('active');
-  document.querySelectorAll('.project-card').forEach(card => {
+  document.querySelectorAll('.pcard').forEach(card => {
     const tags = card.dataset.tags || '';
     const show = tag === 'all' || tags.includes(tag);
     card.style.transition = 'opacity .3s, transform .3s';
@@ -362,12 +350,51 @@ function filterCards(tag, btn) {
 }
 </script>
 <!-- WhatsApp Floating Button -->
-<a href="https://wa.me/254707274060?text=Hi%20Moses%2C%20I%20found%20your%20portfolio%20and%20would%20like%20to%20connect." target="_blank" rel="noopener noreferrer" class="wa-float" aria-label="Chat on WhatsApp">
+<a href="https://wa.me/254707274060?text=Hi%20MoxienTech%2C%20I%20need%20a%20website%20or%20app%20built.%20Can%20we%20talk%20about%20what%20I%20need%3F" target="_blank" rel="noopener noreferrer" class="wa-float" aria-label="Chat on WhatsApp">
   <span class="wa-float-label">Chat on WhatsApp</span>
   <div class="wa-float-btn">
     <div class="wa-float-pulse"></div>
     <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="#fff" width="28" height="28"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
   </div>
 </a>
+<div class="lb" id="lb" hidden>
+  <div class="lb-box" role="dialog" aria-modal="true" aria-label="Work screenshot">
+    <button type="button" class="lb-x" id="lbX" aria-label="Close">&times;</button>
+    <button type="button" class="lb-nav lb-prev" id="lbP" aria-label="Previous">&lsaquo;</button>
+    <button type="button" class="lb-nav lb-next" id="lbN" aria-label="Next">&rsaquo;</button>
+    <div class="lb-stage"><img id="lbImg" alt="" hidden/><div class="lb-ph" id="lbPh"><span id="lbIc"></span>Screenshot coming soon</div></div>
+    <div class="lb-cap"><strong id="lbT"></strong><p id="lbD"></p><a id="lbA" target="_blank" rel="noopener noreferrer" hidden>View live site &rarr;</a></div>
+  </div>
+</div>
+<script>
+(function(){
+  var lb=document.getElementById('lb'); if(!lb) return;
+  var img=document.getElementById('lbImg'), ph=document.getElementById('lbPh'), cur=-1, last=null;
+  function list(){ return Array.prototype.filter.call(document.querySelectorAll('.pc-img'),function(b){return b.offsetParent!==null;}); }
+  function show(i){
+    var L=list(); if(!L.length) return; cur=(i+L.length)%L.length; var b=L[cur], im=b.querySelector('img');
+    document.getElementById('lbT').textContent=b.dataset.title; document.getElementById('lbD').textContent=b.dataset.desc;
+    var a=document.getElementById('lbA'); if(b.dataset.link){a.href=b.dataset.link;a.hidden=false;}else{a.hidden=true;}
+    var ok=im && im.complete && im.naturalWidth>0;
+    if(ok){ img.src=im.currentSrc||im.src; img.alt=b.dataset.title; img.hidden=false; ph.style.display='none'; }
+    else { img.hidden=true; img.removeAttribute('src'); document.getElementById('lbIc').innerHTML=b.querySelector('.pc-ph').innerHTML; ph.style.display='flex'; }
+    lb.hidden=false; document.body.style.overflow='hidden';
+  }
+  function close(){ lb.hidden=true; document.body.style.overflow=''; if(last) last.focus(); }
+  document.addEventListener('click',function(e){ var b=e.target.closest('.pc-img'); if(b){ last=b; show(list().indexOf(b)); } });
+  document.getElementById('lbX').onclick=close;
+  document.getElementById('lbP').onclick=function(){show(cur-1)};
+  document.getElementById('lbN').onclick=function(){show(cur+1)};
+  lb.addEventListener('click',function(e){ if(e.target===lb) close(); });
+  document.addEventListener('keydown',function(e){ if(lb.hidden) return; if(e.key==='Escape') close(); if(e.key==='ArrowLeft') show(cur-1); if(e.key==='ArrowRight') show(cur+1); });
+})();
+</script>
+<script>
+document.addEventListener('click',function(e){
+  var b=e.target.closest('.pc-more'); if(!b) return;
+  var p=b.parentNode, s=p.querySelector('.pc-short'), f=p.querySelector('.pc-full'), open=f.hidden;
+  s.hidden=open; f.hidden=!open; b.textContent=open?'Show less':'Read more'; b.setAttribute('aria-expanded',open);
+});
+</script>
 </body>
 </html>

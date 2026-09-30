@@ -3,15 +3,14 @@
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<meta name="description" content="About Moses Mulwa — Full-stack Python & Django developer based in Nairobi, Kenya. Mozilla RCC Runner-Up. Building production systems with real users."/>
-<meta property="og:title" content="About — Moses Mulwa · Django & AI Developer"/>
-<meta property="og:description" content="Full-stack Python developer based in Nairobi. I build and operate production Django systems, not prototypes."/>
+<meta name="description" content="About MoxienTech: a Kenyan web development business led by Moses Mulwa that delivers websites and apps on time, at a fair price."/>
+<meta property="og:title" content="About — MoxienTech"/>
+<meta property="og:description" content="A software developer in Nairobi who delivers websites and apps on time, at a fair price."/>
 <meta property="og:type" content="website"/>
-<meta property="og:image" content="Moses-mulwa.png"/>
+<meta property="og:image" content="Moses-mulwa.jpg"/>
 <meta name="twitter:card" content="summary_large_image"/>
-<link rel="icon" type="image/png" href="favicon.png"/>
-<link rel="shortcut icon" href="favicon.ico"/>
-<title>About — Moses Mulwa · Django & AI Developer</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23FF6200'/%3E%3Ctext x='32' y='42' font-size='28' font-weight='700' font-family='Arial' fill='white' text-anchor='middle'%3EMT%3C/text%3E%3C/svg%3E"/>
+<title>About — MoxienTech</title>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@400,0..1&display=swap" rel="stylesheet"/>
 <link rel="stylesheet" href="shared.css"/>
@@ -211,6 +210,12 @@
   .skills-section, .cred-section { padding: 52px 20px; }
   .cred-grid, .skills-grid { grid-template-columns: 1fr; }
 }
+.about-tools{margin:8px 0 28px;padding-top:22px;border-top:1px solid var(--border)}
+.about-tools-label{display:block;font-size:.8rem;font-weight:800;color:var(--text);margin-bottom:10px}
+.about-tools-list{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px}
+.about-tools-link{display:block;font-size:.85rem;font-weight:700;color:var(--brand);text-decoration:none;margin-top:6px}
+.about-tools-link:hover{text-decoration:underline}
+.about-signoff{font-size:1.35rem;font-weight:800;color:var(--text);letter-spacing:-.01em;margin:0 0 18px}
 </style>
 </head>
 <body>
@@ -218,19 +223,18 @@
 <header class="nav-wrap dsk">
   <div class="nav-inner">
     <a class="nav-logo" href="index.html">
-      <div class="nav-logo-mark">MM</div>
+      <img class="nav-logo-img" src="logo.svg" alt="MoxienTech logo" width="40" height="40" onerror="if(!this.dataset.t){this.dataset.t=1;this.src='logo.png'}else{this.style.display='none';this.nextElementSibling.style.display='flex'}"/><div class="nav-logo-mark" style="display:none">MT</div>
       <div>
-        <div class="nav-logo-name">Moses Mulwa</div>
-        <div class="nav-logo-role">Python Developer</div>
+        <div class="nav-logo-name">MoxienTech</div>
       </div>
     </a>
     <nav class="nav-links">
       <a class="nav-link" href="index.html">Home</a>
-      <a class="nav-link" href="projects.html">Projects</a>
+      <a class="nav-link" href="projects.html">Portfolio</a>
       <a class="nav-link act" href="about.html">About</a>
       <a class="nav-link" href="contact.html">Contact</a>
     </nav>
-    <a href="contact.html" class="nav-cta">Hire Me <span style="font-family:'Material Symbols Outlined';font-size:15px;vertical-align:middle;">arrow_forward</span></a>
+    <a href="contact.html" class="nav-cta">Start a Project <span style="font-family:'Material Symbols Outlined';font-size:15px;vertical-align:middle;">arrow_forward</span></a>
   </div>
 </header>
 
@@ -244,7 +248,7 @@
     <aside class="about-photo-col reveal">
       <div>
         <div class="about-photo">
-          <img src="Moses-mulwa.png" alt="Moses Mulwa"/>
+          <img src="Moses-mulwa.jpg" alt="Moses Mulwa"/>
         </div>
         <p class="about-photo-caption">Nairobi / Embu, Kenya</p>
       </div>
@@ -252,52 +256,42 @@
         <div class="status-card">
           <div class="status-row">
             <span class="status-icon">location_on</span>
-            <span class="status-text"><strong>Nairobi / Embu</strong><br/>Kenya · UTC+3</span>
+            <span class="status-text"><strong>Nairobi / Embu</strong><br/>Kenya</span>
           </div>
           <div class="status-row">
             <span class="status-icon">radio_button_checked</span>
-            <span class="status-text" style="color:var(--brand);font-weight:700;">Open to work</span>
+            <span class="status-text" style="color:var(--brand);font-weight:700;">Taking on select projects</span>
           </div>
           <div class="status-row">
             <span class="status-icon">work</span>
-            <span class="status-text">Freelance & full-time</span>
+            <span class="status-text">Websites, apps &amp; systems</span>
           </div>
           <div class="status-row">
-            <span class="status-icon">wifi</span>
-            <span class="status-text">Remote-friendly</span>
+            <span class="status-icon">schedule</span>
+            <span class="status-text">Replies within 24 hours</span>
           </div>
         </div>
-        <a href="Moses_Mulwa_Master_CV.pdf" download class="cv-btn">
-          <span style="font-family:'Material Symbols Outlined';font-size:16px;vertical-align:middle;">download</span>
-          Download CV
-        </a>
       </div>
     </aside>
 
     <!-- Story Column -->
     <div class="about-story reveal reveal-d1">
-      <span class="about-eyebrow">About Me</span>
-      <h1 class="about-headline">I build things<br/>that <em>actually ship.</em></h1>
+      <span class="about-eyebrow">About MoxienTech</span>
+      <h1 class="about-headline">Reliable software,<br/><em>delivered on time.</em></h1>
 
       <div class="story-block">
         <p>
-          I'm a full-stack Python developer based in Kenya. But more than just writing code, I deploy, operate, and own production systems. My flagship project <strong>EasyHostels</strong> isn't a GitHub repo — it's a live marketplace with <strong>150+ active users</strong>, running on a self-managed Ubuntu VPS I configured from scratch: Nginx, Cloudflare DNS, PostgreSQL, custom SSL. When something breaks at 2am, I fix it.
+          I'm Moses Mulwa, a software developer and the founder of MoxienTech, based in Nairobi and Embu, Kenya. I help organisations, businesses and communities get the website or app they need <strong>without long waits or inflated costs</strong>. You tell me the problem, and I take care of the rest: planning, building, putting it online and keeping it running.
         </p>
       </div>
 
       <div class="story-callout">
-        <p>"I take full ownership — from the first line of code to production incidents. I don't hand off deployment to someone else."</p>
+        <p>"You shouldn't have to worry about missed deadlines or surprise costs. I agree the work upfront, deliver when I say I will, and stay around after launch."</p>
       </div>
 
       <div class="story-block">
         <p>
-          My interest in AI isn't theoretical. At the <em>Mozilla Responsible Computing Challenge</em>, I ranked <strong>2nd out of 30 teams</strong> building an AI-powered agricultural decision support system — real ML applied to real-world food security problems. Shortly after, a client hired me solo to build <strong>InvoiceIQ</strong>, an LLM-powered invoice extraction platform. I delivered it in 4 weeks: OCR pipeline, Llama 3.3 integration, Human-in-the-Loop review dashboard, DRF API — the whole thing.
-        </p>
-      </div>
-
-      <div class="story-block">
-        <p>
-          I'm currently finishing my BSc IT at the University of Embu, where I've balanced coursework with shipping production code. I believe the best developers close the loop — they don't just build features, they understand how they behave at scale, under real traffic, with real users.
+          I've done this for real people. The <strong>University of Embu Christian Union website</strong>, built with a fellow developer, brings a whole community's ministries, events and elections into one place. <strong>EasyHostels</strong> helped students find verified housing, with over <strong>150 people</strong> using it. When a client needed a tool to read invoices automatically, I delivered it in <strong>4 weeks</strong>, working alone.
         </p>
       </div>
 
@@ -306,92 +300,46 @@
         <div class="principle-item">
           <div class="principle-dot"></div>
           <div class="principle-text">
-            <strong>Production-first thinking</strong>
-            I design for the deployed state, not the demo.
+            <strong>Delivered on time</strong>
+            An invoice-reading tool went from brief to live in 4 weeks, built solo.
           </div>
         </div>
         <div class="principle-item">
           <div class="principle-dot"></div>
           <div class="principle-text">
-            <strong>Full ownership</strong>
-            Code, infra, incidents — I see it all the way through.
+            <strong>Fair, friendly pricing</strong>
+            Costs are agreed upfront, so there are no surprises later.
           </div>
         </div>
         <div class="principle-item">
           <div class="principle-dot"></div>
           <div class="principle-text">
-            <strong>Fast delivery</strong>
-            InvoiceIQ: 4 weeks, solo, full-stack, from brief to live.
+            <strong>Plain, simple communication</strong>
+            No jargon. Clear updates and quick replies.
           </div>
         </div>
         <div class="principle-item">
           <div class="principle-dot"></div>
           <div class="principle-text">
-            <strong>AI with responsibility</strong>
-            Human-in-the-loop, not blind automation.
+            <strong>Support after launch</strong>
+            I stay available after launch to keep things running and fix problems.
           </div>
         </div>
       </div>
 
+      <div class="about-tools">
+        <a class="about-tools-link" href="https://www.linkedin.com/in/moses-francis-8a590b251/" target="_blank" rel="noopener noreferrer">Connect on LinkedIn &#8599;</a>
+        <!-- GitHub: uncomment and add your profile link when ready
+        <a class="about-tools-link" href="https://github.com/YOUR-USERNAME" target="_blank" rel="noopener noreferrer">See my code on GitHub &#8599;</a>
+        -->
+      </div>
+      <p class="about-signoff">Built to deliver.</p>
       <div class="about-ctas">
-        <a href="contact.html" class="btn-primary">Get In Touch</a>
+        <a href="contact.html" class="btn-primary">Start a Project</a>
         <a href="projects.html" class="btn-outline">View My Work</a>
       </div>
     </div>
 
-  </div>
-</section>
-
-<!-- ── CREDENTIALS ── -->
-<section class="cred-section">
-  <div class="cred-inner">
-    <div class="cred-header reveal">
-      <span class="section-label">Background</span>
-      <h2>Education & Recognition</h2>
-    </div>
-    <div class="cred-grid">
-
-      <!-- Mozilla RCC — expanded, prominent -->
-      <div class="cred-card cred-card--featured reveal">
-        <div class="cred-icon-row">
-          <div class="cred-icon" style="background:linear-gradient(135deg,#fff3e0,#ffe0b2);color:#e65100;">
-            <span style="font-family:'Material Symbols Outlined';font-size:22px;">emoji_events</span>
-          </div>
-          <div>
-            <div class="cred-title">Mozilla Responsible Computing Challenge</div>
-            <div class="cred-org">2nd Place out of 30 Teams · 2024</div>
-          </div>
-        </div>
-        <p style="font-size:.82rem;line-height:1.7;color:var(--muted);margin-bottom:12px;">
-          The Mozilla Foundation's global programme challenging student developers to build AI systems that are ethical, transparent, and socially responsible — not just technically impressive. Teams competed across Africa and beyond.
-        </p>
-        <p style="font-size:.82rem;line-height:1.7;color:var(--muted);margin-bottom:14px;">
-          Our team built an <strong style="color:var(--text);">AI-powered agricultural decision support system</strong> to help smallholder farmers in Kenya make data-driven crop decisions — predicting optimal planting windows, flagging pest risks, and recommending interventions based on local conditions. Real ML applied to a real food-security problem.
-        </p>
-        <div style="display:flex;flex-wrap:wrap;gap:6px;">
-          <span class="tag">AI / ML</span>
-          <span class="tag">Python</span>
-          <span class="tag">Food Security</span>
-          <span class="tag">Ethical AI</span>
-          <span class="tag">Mozilla Foundation</span>
-        </div>
-      </div>
-
-      <!-- University -->
-      <div class="cred-card reveal reveal-d1">
-        <div class="cred-icon-row">
-          <div class="cred-icon"><span style="font-family:'Material Symbols Outlined';font-size:20px;">school</span></div>
-          <div>
-            <div class="cred-title">BSc Information Technology</div>
-            <div class="cred-org">University of Embu</div>
-          </div>
-        </div>
-        <p style="font-size:.82rem;line-height:1.7;color:var(--muted);margin-bottom:0;">
-          Aug 2022 – 2026. While completing coursework in Software Engineering, DBMS, Networks and AI, I was simultaneously running live production systems serving real users — closing the loop between academic theory and deployment reality.
-        </p>
-      </div>
-
-    </div>
   </div>
 </section>
 
@@ -402,42 +350,39 @@
     <div class="footer-top">
       <div>
         <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px;">
-          <div class="nav-logo-mark" style="width:32px;height:32px;font-size:.7rem;">MM</div>
+          <img class="nav-logo-img" src="logo.svg" alt="MoxienTech logo" style="height:32px" onerror="if(!this.dataset.t){this.dataset.t=1;this.src='logo.png'}else{this.style.display='none';this.nextElementSibling.style.display='flex'}"/><div class="nav-logo-mark" style="display:none;width:32px;height:32px;font-size:.7rem;">MT</div>
           <div>
-            <div class="footer-brand-name">Moses Mulwa</div>
-            <div class="footer-brand-sub">Django · AI · Nairobi, Kenya</div>
+            <div class="footer-brand-name">MoxienTech</div>
           </div>
         </div>
         <div style="display:flex;gap:16px;margin-top:16px;">
-          <a href="https://github.com/mocech" target="_blank" rel="noopener noreferrer" class="footer-link" style="margin-bottom:0;">GitHub</a>
           <a href="https://www.linkedin.com/in/moses-francis-8a590b251/" target="_blank" rel="noopener noreferrer" class="footer-link" style="margin-bottom:0;">LinkedIn</a>
-          <a href="mailto:mosesfrancis018@gmail.com" class="footer-link" style="margin-bottom:0;">Email</a>
+          <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=mosesfrancis018@gmail.com&amp;su=Project%20enquiry&amp;body=Hi%20Moses%2C%0A%0AI%20would%20like%20to%20talk%20about%20a%20project.%0A%0A" target="_blank" rel="noopener noreferrer" class="footer-link" style="margin-bottom:0;">Email</a>
         </div>
       </div>
       <div>
         <div class="footer-links-title">Navigate</div>
         <a href="index.html" class="footer-link">Home</a>
-        <a href="projects.html" class="footer-link">Projects</a>
+        <a href="projects.html" class="footer-link">Portfolio</a>
         <a href="about.html" class="footer-link">About</a>
         <a href="contact.html" class="footer-link">Contact</a>
       </div>
       <div>
-        <div class="footer-links-title">Live Apps</div>
-        <a href="https://easyhostels.livify.co.ke" target="_blank" rel="noopener noreferrer" class="footer-link">EasyHostels</a>
+        <div class="footer-links-title">Recent Work</div>
+        <a href="https://uoemcu.co.ke/" target="_blank" rel="noopener noreferrer" class="footer-link">UoEm CU Website</a>
         <a href="https://invoicesq.pythonanywhere.com/" target="_blank" rel="noopener noreferrer" class="footer-link">InvoiceIQ</a>
-        <a href="https://uoemcu.co.ke/evaluation/" target="_blank" rel="noopener noreferrer" class="footer-link">CU Evaluation</a>
       </div>
     </div>
     <div class="footer-copy">
-      <span>© 2026 Moses Mulwa · Nairobi, Kenya</span>
-      <span class="mono" style="font-size:.68rem;">Django · Python · VPS</span>
+      <span>© 2026 MoxienTech · Nairobi, Kenya</span>
+      <span class="mono" style="font-size:.68rem;">Built in Nairobi, Kenya</span>
     </div>
   </div>
 </footer>
 
 <nav class="mbn">
   <a href="index.html" class="mbn-item"><span class="mbi">home</span><span>Home</span></a>
-  <a href="projects.html" class="mbn-item"><span class="mbi">work</span><span>Projects</span></a>
+  <a href="projects.html" class="mbn-item"><span class="mbi">work</span><span>Portfolio</span></a>
   <a href="about.html" class="mbn-item act"><span class="mbi">person</span><span>About</span></a>
   <a href="contact.html" class="mbn-item"><span class="mbi">mail</span><span>Contact</span></a>
 </nav>
@@ -447,7 +392,7 @@ const io = new IntersectionObserver(e => e.forEach(x => { if(x.isIntersecting) x
 document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 </script>
 <!-- WhatsApp Floating Button -->
-<a href="https://wa.me/254707274060?text=Hi%20Moses%2C%20I%20found%20your%20portfolio%20and%20would%20like%20to%20connect." target="_blank" rel="noopener noreferrer" class="wa-float" aria-label="Chat on WhatsApp">
+<a href="https://wa.me/254707274060?text=Hi%20MoxienTech%2C%20I%20need%20a%20website%20or%20app%20built.%20Can%20we%20talk%20about%20what%20I%20need%3F" target="_blank" rel="noopener noreferrer" class="wa-float" aria-label="Chat on WhatsApp">
   <span class="wa-float-label">Chat on WhatsApp</span>
   <div class="wa-float-btn">
     <div class="wa-float-pulse"></div>

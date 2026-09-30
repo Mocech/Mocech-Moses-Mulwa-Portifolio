@@ -3,18 +3,17 @@
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<title>Moses Mulwa — Full-Stack Python Developer</title>
-<meta name="description" content="Django developer building production systems with real users. Mozilla RCC Runner-Up. Open to remote and Kenyan opportunities."/>
-<meta property="og:title" content="Moses Mulwa — Full-Stack Python Developer"/>
-<meta property="og:description" content="Django developer building production systems with real users. Mozilla RCC Runner-Up. 150+ live users. Open to remote and Kenyan opportunities."/>
+<title>MoxienTech — Websites &amp; Web Apps in Kenya</title>
+<meta name="description" content="I build websites and apps that solve real problems for communities, students and businesses. Get a reply within 24 hours."/>
+<meta property="og:title" content="MoxienTech — Websites &amp; Web Apps in Kenya"/>
+<meta property="og:description" content="I build websites and apps that solve real problems for communities, students and businesses. 150+ people use my work. Get a reply within 24 hours."/>
 <meta property="og:type" content="website"/>
 <meta property="og:url" content="https://mosesmulwa.dev"/>
-<meta property="og:image" content="Moses-mulwa.png"/>
+<meta property="og:image" content="Moses-mulwa.jpg"/>
 <meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:title" content="Moses Mulwa — Full-Stack Python Developer"/>
-<meta name="twitter:description" content="Django developer building production systems with real users. Mozilla RCC Runner-Up."/>
-<link rel="icon" type="image/png" href="favicon.png"/>
-<link rel="shortcut icon" href="favicon.ico"/>
+<meta name="twitter:title" content="MoxienTech — Websites &amp; Web Apps in Kenya"/>
+<meta name="twitter:description" content="I build websites and apps that solve real problems for communities, students and businesses."/>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23FF6200'/%3E%3Ctext x='32' y='42' font-size='28' font-weight='700' font-family='Arial' fill='white' text-anchor='middle'%3EMT%3C/text%3E%3C/svg%3E"/>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@400,0..1&display=swap" rel="stylesheet"/>
 <link rel="stylesheet" href="shared.css"/>
@@ -27,19 +26,6 @@
 .hero-h1 em { color: var(--brand); font-style: normal; }
 .hero-sub { font-size: 1.05rem; line-height: 1.75; color: var(--muted); max-width: 460px; margin-bottom: 28px; }
 .hero-sub strong { color: var(--text); font-weight: 700; }
-.hero-photo-wrap { flex-shrink: 0; position: relative; }
-.hero-photo {
-  width: 230px; height: 230px; border-radius: 24px;
-  overflow: hidden; border: 3px solid var(--brand-light);
-  box-shadow: 0 0 0 6px var(--brand-faint), 8px 16px 48px rgba(255,98,0,.12);
-  position: relative;
-}
-.hero-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center top; }
-.hero-photo-deco {
-  position: absolute; inset: -12px;
-  border: 2px dashed rgba(255,98,0,.2);
-  border-radius: 30px; pointer-events: none;
-}
 
 /* Available badge */
 .avail-badge { display: inline-flex; align-items: center; gap: 8px; background: var(--brand-faint); border: 1px solid var(--brand-light); padding: 7px 16px; border-radius: 100px; margin-bottom: 22px; }
@@ -49,12 +35,6 @@
 .avail-text { font-size: .68rem; font-weight: 700; color: var(--brand); font-family: 'JetBrains Mono', monospace; }
 
 /* ── STAT BAR ── */
-.stat-bar { background: var(--brand); padding: 28px 24px; }
-.stat-inner { max-width: 1100px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: center; gap: 0; }
-.stat-item { flex: 1; min-width: 130px; max-width: 220px; text-align: center; padding: 12px 20px; border-right: 1px solid rgba(255,255,255,.18); }
-.stat-item:last-child { border-right: none; }
-.stat-num { font-size: 1.8rem; font-weight: 800; color: #fff; line-height: 1; }
-.stat-label { font-size: .7rem; color: rgba(255,255,255,.55); margin-top: 5px; text-transform: uppercase; letter-spacing: .08em; font-family: 'JetBrains Mono', monospace; }
 
 /* ── WORK SECTION ── */
 .work-section { padding: 80px 24px; background: var(--off); }
@@ -147,19 +127,75 @@
 }
 @media (max-width: 767px) {
   .hero { padding: 40px 20px 52px; }
-  .hero-inner { gap: 28px; flex-direction: column-reverse; align-items: flex-start; }
-  .hero-photo { width: 100px; height: 100px; border-radius: 16px; }
-  .hero-photo-deco { display: none; }
-  .stat-item { min-width: 100px; }
-  .stat-item { border-right: none; border-bottom: 1px solid rgba(255,255,255,.12); }
-  .stat-item:last-child { border-bottom: none; }
+  .hero-inner { gap: 28px; flex-direction: column; align-items: flex-start; }
   .what-grid { grid-template-columns: 1fr; gap: 14px; }
   .work-section, .what-section { padding: 52px 20px; }
 }
 @media (max-width: 480px) {
-  .stat-inner { flex-direction: column; align-items: center; }
-  .stat-item { width: 100%; max-width: 100%; border-right: none; border-bottom: 1px solid rgba(255,255,255,.1); }
 }
+.faq-section{padding:72px 24px;background:#fff}.faq-inner{max-width:760px;margin:0 auto}.faq-inner details{border:1.5px solid var(--border);border-radius:14px;padding:16px 20px;margin-bottom:12px}.faq-inner summary{cursor:pointer;font-weight:700;color:var(--text);font-size:.95rem}.faq-inner details p{margin-top:10px;font-size:.875rem;line-height:1.7;color:var(--muted)}
+.hero-text{flex:1;min-width:280px}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:28px}
+.hero-person{display:flex;align-items:center;gap:12px}
+.hero-person img{width:46px;height:46px;border-radius:50%;object-fit:cover;border:2px solid var(--brand-light)}
+.hero-person strong{display:block;font-size:.9rem;font-weight:800;color:var(--text)}
+.hero-person small{font-size:.75rem;color:var(--muted)}
+.hero-show{flex-shrink:0;position:relative;width:460px;max-width:100%;padding:0 16px 34px 0}
+.hero-show::before{content:'';position:absolute;top:18px;left:18px;right:0;bottom:34px;border-radius:30px;background:linear-gradient(135deg,var(--brand),#ff9a55)}
+.show-stage{position:relative;display:grid}
+.show-slide{grid-area:1/1;background:#fff;border:1.5px solid var(--border);border-radius:22px;overflow:hidden;box-shadow:0 24px 60px rgba(20,20,40,.2);opacity:0;visibility:hidden;transition:opacity .6s,visibility .6s}
+.show-slide.active{opacity:1;visibility:visible}
+.show-bar{display:flex;align-items:center;gap:6px;padding:10px 14px;background:#f4f4f7;border-bottom:1px solid var(--border)}
+.show-bar i{width:9px;height:9px;border-radius:50%;background:#d4d4dc}
+.show-bar span{margin-left:8px;flex:1;background:#fff;border-radius:100px;padding:3px 12px;font-size:.68rem;color:var(--muted);font-family:'JetBrains Mono',monospace}
+.show-shot{position:relative;aspect-ratio:16/10;background:linear-gradient(135deg,var(--brand-light),var(--brand-faint));display:flex;align-items:center;justify-content:center}
+.show-shot b{display:flex;color:var(--brand);opacity:.35}
+.show-shot img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top}
+.show-cap{padding:16px 20px 18px}
+.show-cap strong{display:block;font-size:1rem;font-weight:800;color:var(--text);margin-bottom:4px}
+.show-cap p{font-size:.82rem;line-height:1.6;color:var(--muted);margin-bottom:10px}
+.show-cap a{font-size:.78rem;font-weight:700;color:var(--brand);text-decoration:none}
+.show-dots{position:absolute;left:0;right:16px;bottom:0;display:flex;justify-content:center;gap:8px}
+.show-dots button{width:9px;height:9px;padding:0;border:0;border-radius:50%;background:var(--border);cursor:pointer;transition:all .3s}
+.show-dots button.on{width:26px;border-radius:9px;background:var(--brand)}
+@media (max-width:767px){.hero-show{width:100%}.show-cap{padding:14px 16px 16px}}
+.pgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:20px;align-items:stretch}
+.pcard{background:#fff;border:1.5px solid var(--border);border-radius:16px;padding:0;overflow:hidden;display:flex;flex-direction:column;transition:box-shadow .3s,transform .3s,border-color .3s}
+.pcard:hover{box-shadow:0 12px 30px rgba(255,98,0,.12);transform:translateY(-2px);border-color:var(--brand-light)}
+.pc-head{display:grid;grid-template-columns:100%;margin:0}
+.pc-img{grid-area:1/1;position:relative;display:block;width:100%;aspect-ratio:2.4/1;border:0;border-radius:0;padding:0;cursor:zoom-in;overflow:hidden;background:linear-gradient(135deg,var(--brand-light),var(--brand-faint))}
+.pc-img::after{content:'';position:absolute;inset:0;background:linear-gradient(0deg,rgba(15,15,25,.45) 0%,transparent 55%);pointer-events:none}
+.pc-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top;transition:transform .5s}
+.pcard:hover .pc-img img{transform:scale(1.04)}
+.pc-ph{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:var(--brand);opacity:.4}
+.pc-zoom{position:absolute;right:10px;bottom:10px;z-index:2;width:26px;height:26px;border-radius:8px;background:rgba(20,20,30,.72);color:#fff;font-size:.8rem;display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity .25s}
+.pc-img:hover .pc-zoom,.pc-img:focus-visible .pc-zoom{opacity:1}
+.pc-meta{display:contents}
+.pc-badges{grid-area:1/1;align-self:end;justify-self:start;position:relative;z-index:2;display:flex;flex-wrap:wrap;gap:5px;margin:0 46px 10px 10px;pointer-events:none}
+.pc-badge{font-size:.6rem;font-weight:700;padding:3px 9px;border-radius:100px;font-family:'JetBrains Mono',monospace;background:var(--brand);color:#fff;box-shadow:0 2px 8px rgba(0,0,0,.18)}
+.pc-badge.grey{background:#6b7280}.pc-badge.light{background:rgba(255,255,255,.94);color:#4b5563}
+.pc-title{grid-row:2;grid-column:1;padding:14px 18px 0;font-size:1rem;font-weight:800;color:var(--text);line-height:1.3}
+.pc-desc{font-size:.83rem;line-height:1.6;color:var(--muted);margin:6px 18px 12px}
+.pc-more{border:0;background:none;padding:0;font:inherit;font-weight:700;color:var(--brand);cursor:pointer}
+.pc-more:hover{text-decoration:underline}
+.pc-tags{display:flex;flex-wrap:wrap;gap:5px;margin:0 18px 14px}
+.pc-actions{margin:auto 18px 0;padding:0 0 16px}
+.pc-actions a{box-sizing:border-box;min-height:36px;display:inline-flex;align-items:center}
+@media (max-width:600px){.pgrid{grid-template-columns:1fr;gap:16px}.pc-img{aspect-ratio:2.2/1}.pc-zoom{opacity:1}}
+.lb{position:fixed;inset:0;z-index:9999;background:rgba(15,15,25,.86);display:flex;align-items:center;justify-content:center;padding:20px}
+.lb[hidden]{display:none}
+.lb-box{position:relative;width:min(1000px,100%);max-height:100%;display:flex;flex-direction:column;background:#fff;border-radius:18px;overflow:hidden}
+.lb-stage{position:relative;background:#111;display:flex;align-items:center;justify-content:center;min-height:200px;max-height:68vh;overflow:auto}
+.lb-stage img{display:block;max-width:100%;max-height:68vh;object-fit:contain}
+.lb-ph{display:none;flex-direction:column;align-items:center;gap:12px;padding:60px 20px;color:#fff;font-size:.85rem;opacity:.8}
+.lb-cap{padding:16px 22px 18px}
+.lb-cap strong{display:block;font-size:1rem;font-weight:800;color:var(--text);margin-bottom:4px}
+.lb-cap p{font-size:.85rem;line-height:1.6;color:var(--muted);margin-bottom:10px}
+.lb-cap a{font-size:.8rem;font-weight:700;color:var(--brand);text-decoration:none}
+.lb-x,.lb-nav{position:absolute;z-index:3;border:0;cursor:pointer;background:rgba(255,255,255,.92);color:#111;border-radius:50%;width:40px;height:40px;font-size:1.5rem;line-height:1;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 14px rgba(0,0,0,.25)}
+.lb-x{top:12px;right:12px}
+.lb-nav{top:calc(34vh - 20px)}
+.lb-prev{left:12px}.lb-next{right:12px}
 </style>
 </head>
 <body>
@@ -167,19 +203,18 @@
 <header class="nav-wrap dsk">
   <div class="nav-inner">
     <a class="nav-logo" href="index.html">
-      <div class="nav-logo-mark">MM</div>
+      <img class="nav-logo-img" src="logo.svg" alt="MoxienTech logo" width="40" height="40" onerror="if(!this.dataset.t){this.dataset.t=1;this.src='logo.png'}else{this.style.display='none';this.nextElementSibling.style.display='flex'}"/><div class="nav-logo-mark" style="display:none">MT</div>
       <div>
-        <div class="nav-logo-name">Moses Mulwa</div>
-        <div class="nav-logo-role">Python Developer</div>
+        <div class="nav-logo-name">MoxienTech</div>
       </div>
     </a>
     <nav class="nav-links">
       <a class="nav-link act" href="index.html">Home</a>
-      <a class="nav-link" href="projects.html">Projects</a>
+      <a class="nav-link" href="projects.html">Portfolio</a>
       <a class="nav-link" href="about.html">About</a>
       <a class="nav-link" href="contact.html">Contact</a>
     </nav>
-    <a href="contact.html" class="nav-cta">Hire Me <span style="font-family:'Material Symbols Outlined';font-size:15px;vertical-align:middle;">arrow_forward</span></a>
+    <a href="contact.html" class="nav-cta">Start a Project <span style="font-family:'Material Symbols Outlined';font-size:15px;vertical-align:middle;">arrow_forward</span></a>
   </div>
 </header>
 
@@ -194,103 +229,145 @@
           <span class="avail-dot-ping ping"></span>
           <span class="avail-dot"></span>
         </span>
-        <span class="avail-text">Open to opportunities</span>
+        <span class="avail-text">Taking on select projects</span>
       </div>
-      <h1 class="hero-h1">Moses Mulwa<br/><em>Full Stack</em><br/>Developer</h1>
+      <h1 class="hero-h1">Websites and apps<br/>that solve <em>your problem.</em></h1>
       <p class="hero-sub">
-        I build and <em>operate</em> production Django systems — not prototypes. Currently running <strong>EasyHostels</strong>, a live student housing marketplace with 150+ active users, on a self-managed Ubuntu VPS.
-      </p>
-      <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:28px;">
-        <div class="pill"><span style="font-family:'Material Symbols Outlined';font-size:13px;vertical-align:middle;">emoji_events</span> Mozilla RCC · 2nd / 30</div>
-        <div class="pill"><span style="font-family:'Material Symbols Outlined';font-size:13px;vertical-align:middle;">group</span> 150+ live users</div>
-        <div class="pill"><span style="font-family:'Material Symbols Outlined';font-size:13px;vertical-align:middle;">dns</span> Self-managed VPS</div>
+        Delivered on time, at a fair price, with no jargon and no surprises.</p>
+      <div class="hero-actions">
+        <a href="contact.html" class="btn-primary">Start a Project <span style="font-family:'Material Symbols Outlined';font-size:15px;vertical-align:middle;">arrow_forward</span></a>
+        <a href="https://wa.me/254707274060?text=Hi%20MoxienTech%2C%20I%20need%20a%20website%20or%20app%20built.%20Can%20we%20talk%20about%20what%20I%20need%3F" target="_blank" rel="noopener noreferrer" class="btn-wa"><svg viewBox="0 0 24 24" width="20" height="20" fill="#fff" aria-hidden="true" style="flex-shrink:0"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> Chat on WhatsApp</a>
       </div>
-      <div style="display:flex;flex-wrap:wrap;gap:12px;">
-        <a href="projects.html" class="btn-primary">View My Work <span style="font-family:'Material Symbols Outlined';font-size:15px;vertical-align:middle;">arrow_forward</span></a>
-        <a href="Moses_Mulwa_Master_CV.pdf" download class="btn-outline"><span style="font-family:'Material Symbols Outlined';font-size:15px;vertical-align:middle;">download</span> Download CV</a>
+      <div class="hero-person">
+        <img src="Moses-mulwa.jpg" alt="Moses Mulwa"/>
+        <div><strong>Moses Mulwa</strong><small>Founder &amp; Developer · Kenya</small></div>
       </div>
     </div>
 
-    <div class="hero-photo-wrap reveal reveal-d1">
-      <div class="hero-photo-deco"></div>
-      <div class="hero-photo">
-        <img src="Moses-mulwa.png" alt="Moses Mulwa"/>
+    <div class="hero-show reveal reveal-d1" id="heroShow" aria-roledescription="carousel" aria-label="My recent projects">
+      <div class="show-stage">
+        <figure class="show-slide active" style="margin:0">
+          <div class="show-bar"><i></i><i></i><i></i><span>uoemcu.co.ke</span></div>
+          <div class="show-shot"><b><svg viewBox="0 0 64 64" width="72" height="72" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><path d="M32 6v10M27 11h10M32 16 14 30v26h36V30z"/><path d="M26 56V42a6 6 0 0 1 12 0v14"/></svg></b><img src="shot-cu.png" alt="UoEm Christian Union website screenshot" onerror="this.remove()"/></div>
+          <figcaption class="show-cap"><strong>UoEm Christian Union</strong><p>One place for a whole community's ministries, events and elections.</p><a href="https://uoemcu.co.ke/" target="_blank" rel="noopener noreferrer">View live site &rarr;</a></figcaption>
+        </figure>
+        <figure class="show-slide" style="margin:0">
+          <div class="show-bar"><i></i><i></i><i></i><span>InvoiceIQ</span></div>
+          <div class="show-shot"><b><svg viewBox="0 0 64 64" width="72" height="72" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><path d="M16 6h32v52l-6-4-5 4-5-4-5 4-5-4-6 4z"/><path d="M24 20h16M24 30h16M24 40h10"/></svg></b><img src="shot-invoiceiq.png" alt="InvoiceIQ website screenshot" onerror="this.remove()"/></div>
+          <figcaption class="show-cap"><strong>InvoiceIQ</strong><p>Reads invoices automatically and passes unclear ones to a person to check.</p><a href="https://invoicesq.pythonanywhere.com/" target="_blank" rel="noopener noreferrer">View live site &rarr;</a></figcaption>
+        </figure>
       </div>
+      <div class="show-dots"><button class="on" aria-label="Project 1"></button><button aria-label="Project 2"></button></div>
     </div>
   </div>
 </section>
-
-<!-- STAT BAR -->
-<div class="stat-bar">
-  <div class="stat-inner">
-    <div class="stat-item">
-      <div class="stat-num">150+</div>
-      <div class="stat-label">Active Users</div>
-    </div>
-    <div class="stat-item">
-      <div class="stat-num">2nd</div>
-      <div class="stat-label">Mozilla RCC · 30 Teams</div>
-    </div>
-    <div class="stat-item">
-      <div class="stat-num">3</div>
-      <div class="stat-label">Live Apps</div>
-    </div>
-    <div class="stat-item">
-      <div class="stat-num">4 wk</div>
-      <div class="stat-label">Solo Contract Delivery</div>
-    </div>
-  </div>
-</div>
 
 <!-- FEATURED WORK -->
 <section class="work-section">
   <div class="container">
     <div class="section-header reveal">
       <span class="section-label">Selected Work</span>
-      <h2 class="section-title">Featured Projects</h2>
-      <p class="section-sub">Live systems deployed and operated by me, for real users.</p>
+      <h2 class="section-title">Featured Work</h2>
+      <p class="section-sub">A few of the problems I have solved for real people.</p>
     </div>
 
-    <!-- EasyHostels -->
-    <div class="project-card reveal">
-      <div class="project-img">
-        <img src="hostel.jpg" alt="EasyHostels"/>
-        <div class="project-badge">
-          <span class="pill" style="background:var(--brand);color:#fff;"><span style="width:6px;height:6px;background:#4fffb0;border-radius:50%;display:inline-block;"></span> LIVE</span>
-          <span class="pill" style="background:rgba(255,255,255,.92);color:var(--text);">Featured</span>
+    <div class="pgrid">
+      <article class="pcard reveal" data-tags="websites community">
+        <div class="pc-head">
+          <button type="button" class="pc-img" data-title="UoEm Christian Union — Community Website" data-desc="The online home of the University of Embu Christian Union. Members join ministries, register for events and take part in elections, while leaders manage it all in one place." data-link="https://uoemcu.co.ke/" aria-label="View screenshot: UoEm Christian Union — Community Website">
+            <span class="pc-ph"><svg viewBox="0 0 64 64" width="30" height="30" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><path d="M32 6v10M27 11h10M32 16 14 30v26h36V30z"/><path d="M26 56V42a6 6 0 0 1 12 0v14"/></svg></span>
+            <img src="shot-cu.png" alt="UoEm Christian Union website" loading="lazy" onerror="this.remove()"/>
+            <span class="pc-zoom">&#10530;</span>
+          </button>
+          <div class="pc-meta">
+            <div class="pc-badges"><span class="pc-badge ">LIVE</span></div>
+            <h3 class="pc-title">UoEm Christian Union — Community Website</h3>
+          </div>
         </div>
-      </div>
-      <div class="project-body">
-        <div class="project-tags">
-          <span class="tag">Django</span><span class="tag">PostgreSQL</span><span class="tag">Nginx</span><span class="tag">Ubuntu VPS</span><span class="tag">Cloudflare</span>
+        <p class="pc-desc"><span class="pc-short">The online home of the University of Embu Christian Union. Members join… </span><span class="pc-full" hidden>The online home of the University of Embu Christian Union. Members join ministries, register for events and take part in elections, while leaders manage it all in one place. </span><button type="button" class="pc-more" aria-expanded="false">Read more</button></p>
+        <div class="pc-tags"><span class="tag">Ministries</span><span class="tag">Events</span><span class="tag">Elections</span></div>
+        <div class="pc-actions"><a href="https://uoemcu.co.ke/" target="_blank" rel="noopener noreferrer" class="btn-primary" style="font-size:.75rem;padding:8px 16px;">View live site &#8599;</a></div>
+      </article>
+      <article class="pcard reveal" data-tags="smart websites">
+        <div class="pc-head">
+          <button type="button" class="pc-img" data-title="InvoiceIQ — Invoices Read Automatically" data-desc="Upload an invoice and it picks out more than 15 key details within moments. Anything unclear goes to a person to check, so mistakes do not slip through." data-link="https://invoicesq.pythonanywhere.com/" aria-label="View screenshot: InvoiceIQ — Invoices Read Automatically">
+            <span class="pc-ph"><svg viewBox="0 0 64 64" width="30" height="30" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><path d="M16 6h32v52l-6-4-5 4-5-4-5 4-5-4-6 4z"/><path d="M24 20h16M24 30h16M24 40h10"/></svg></span>
+            <img src="shot-invoiceiq.png" alt="InvoiceIQ invoice reading tool" loading="lazy" onerror="this.onerror=null;this.src='https://lh3.googleusercontent.com/aida-public/AB6AXuA3fIwScNIpNtmsf0uu8A2xnxzooFfOFYRtsspettFlzJY6HznRrx1_4o8xw3n-R02rc8l9xk25Po7TIshvj2AAbkp2zIhsyBixY9p6D48sZopHjGlam5NzwnWscg6sWzI6Yd3G6wvtv_RpxZAx0xfcg5ZK_VCYJ6hciFg61sKebe6-xbAKZAd12cGQiZbPYuZlKVOpBia-vzz8i68-GcQtUkbaRUjuhEVe6EgFiP50jYmdmXnTbuYNmRLwVtlHinWluSUiTye2Yx0'"/>
+            <span class="pc-zoom">&#10530;</span>
+          </button>
+          <div class="pc-meta">
+            <div class="pc-badges"><span class="pc-badge ">LIVE</span></div>
+            <h3 class="pc-title">InvoiceIQ — Invoices Read Automatically</h3>
+          </div>
         </div>
-        <h3 class="project-title">EasyHostels — Student Housing Marketplace</h3>
-        <p class="project-desc">A live marketplace connecting students with verified landlords near University of Embu. 150+ active users. I provision the server, manage Nginx, SSL, DNS, the database, and handle all incidents end-to-end.</p>
-        <div><a href="https://github.com/Mocech/" target="_blank" rel="noopener noreferrer" class="btn-primary" style="font-size:.78rem;padding:9px 18px;">View Live <span style="font-family:'Material Symbols Outlined';font-size:14px;vertical-align:middle;">open_in_new</span></a></div>
-      </div>
-    </div>
-
-    <!-- InvoiceIQ -->
-    <div class="project-card reveal">
-      <div class="project-img">
-        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3fIwScNIpNtmsf0uu8A2xnxzooFfOFYRtsspettFlzJY6HznRrx1_4o8xw3n-R02rc8l9xk25Po7TIshvj2AAbkp2zIhsyBixY9p6D48sZopHjGlam5NzwnWscg6sWzI6Yd3G6wvtv_RpxZAx0xfcg5ZK_VCYJ6hciFg61sKebe6-xbAKZAd12cGQiZbPYuZlKVOpBia-vzz8i68-GcQtUkbaRUjuhEVe6EgFiP50jYmdmXnTbuYNmRLwVtlHinWluSUiTye2Yx0" alt="InvoiceIQ"/>
-        <div class="project-badge">
-          <span class="pill" style="background:var(--brand);color:#fff;"><span style="width:6px;height:6px;background:#4fffb0;border-radius:50%;display:inline-block;"></span> LIVE</span>
-          <span class="pill" style="background:rgba(255,255,255,.92);color:var(--text);">AI / LLM</span>
+        <p class="pc-desc"><span class="pc-short">Upload an invoice and it picks out more than 15 key details within moments… </span><span class="pc-full" hidden>Upload an invoice and it picks out more than 15 key details within moments. Anything unclear goes to a person to check, so mistakes do not slip through. </span><button type="button" class="pc-more" aria-expanded="false">Read more</button></p>
+        <div class="pc-tags"><span class="tag">Saves Time</span><span class="tag">Automation</span><span class="tag">Fewer Errors</span></div>
+        <div class="pc-actions"><a href="https://invoicesq.pythonanywhere.com/" target="_blank" rel="noopener noreferrer" class="btn-primary" style="font-size:.75rem;padding:8px 16px;">View live site &#8599;</a></div>
+      </article>
+      <article class="pcard reveal" data-tags="websites community">
+        <div class="pc-head">
+          <button type="button" class="pc-img" data-title="EasyHostels — Find Student Housing Easily" data-desc="Helped students near University of Embu find safe, verified places to rent, and helped landlords reach the right tenants. Over 150 people used it." aria-label="View screenshot: EasyHostels — Find Student Housing Easily">
+            <span class="pc-ph"><svg viewBox="0 0 64 64" width="30" height="30" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><path d="M12 56V10h28v46M40 24h12v32M20 18h4M28 18h4M20 28h4M28 28h4M20 38h4M28 38h4M24 56V46"/></svg></span>
+            <img src="shot-easyhostels.png" alt="EasyHostels student housing" loading="lazy" onerror="this.onerror=null;this.src='hostel.jpg'"/>
+            <span class="pc-zoom">&#10530;</span>
+          </button>
+          <div class="pc-meta">
+            <div class="pc-badges"><span class="pc-badge grey">Completed</span></div>
+            <h3 class="pc-title">EasyHostels — Find Student Housing Easily</h3>
+          </div>
         </div>
-      </div>
-      <div class="project-body">
-        <div class="project-tags">
-          <span class="tag">Llama 3.3</span><span class="tag">OCR</span><span class="tag">Django DRF</span><span class="tag">Celery</span><span class="tag">JWT</span>
-        </div>
-        <h3 class="project-title">InvoiceIQ — AI Invoice Extraction</h3>
-        <p class="project-desc">LLM reads uploaded PDFs via OCR and extracts 15+ structured fields instantly. Uncertain results route to a Human-in-the-Loop review dashboard. API response under 300ms. Delivered solo in 4 weeks as a freelance contract.</p>
-        <div><a href="https://invoicesq.pythonanywhere.com/" target="_blank" rel="noopener noreferrer" class="btn-primary" style="font-size:.78rem;padding:9px 18px;">View Live <span style="font-family:'Material Symbols Outlined';font-size:14px;vertical-align:middle;">open_in_new</span></a></div>
-      </div>
+        <p class="pc-desc"><span class="pc-short">Helped students near University of Embu find safe, verified places to rent, and… </span><span class="pc-full" hidden>Helped students near University of Embu find safe, verified places to rent, and helped landlords reach the right tenants. Over 150 people used it. </span><button type="button" class="pc-more" aria-expanded="false">Read more</button></p>
+        <div class="pc-tags"><span class="tag">Housing</span><span class="tag">Students</span><span class="tag">Verified Landlords</span></div>
+        <div class="pc-actions"><a href="contact.html" class="btn-outline" style="font-size:.75rem;padding:8px 16px;">Get something like this &rarr;</a></div>
+      </article>
     </div>
 
     <div style="text-align:center;margin-top:16px;">
-      <a href="projects.html" class="btn-outline">See All Projects</a>
+      <a href="projects.html" class="btn-outline">See All Work</a>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS: uncomment and fill in with REAL client quotes
+<section class="what-section">
+  <div class="container">
+    <div class="section-header reveal"><span class="section-label">Kind Words</span><h2 class="section-title">What clients say</h2></div>
+    <div class="what-grid">
+      <div class="what-card reveal"><p class="what-desc">"Quote here."</p><div class="what-title" style="margin-top:12px">Name, Role / Organisation</div></div>
+    </div>
+  </div>
+</section>
+-->
+
+<!-- HOW IT WORKS -->
+<section class="what-section">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-label">Simple Process</span>
+      <h2 class="section-title">How it works</h2>
+      <p class="section-sub">Four clear steps from idea to launch.</p>
+    </div>
+    <div class="what-grid">
+      <div class="what-card reveal">
+        <div class="what-icon"><span style="font-family:'Material Symbols Outlined';">chat_bubble</span></div>
+        <div class="what-title">1. Tell me what you need</div>
+        <p class="what-desc">Share your idea on WhatsApp or the contact form. No technical knowledge needed.</p>
+      </div>
+      <div class="what-card reveal reveal-d1">
+        <div class="what-icon"><span style="font-family:'Material Symbols Outlined';">request_quote</span></div>
+        <div class="what-title">2. Get a plan, price and timeline</div>
+        <p class="what-desc">Within 24 hours I reply with a clear plan, the cost and a delivery date.</p>
+      </div>
+      <div class="what-card reveal reveal-d2">
+        <div class="what-icon"><span style="font-family:'Material Symbols Outlined';">update</span></div>
+        <div class="what-title">3. Watch it come together</div>
+        <p class="what-desc">Regular updates in plain language. Nothing goes live without your approval.</p>
+      </div>
+      <div class="what-card reveal reveal-d3">
+        <div class="what-icon"><span style="font-family:'Material Symbols Outlined';">rocket_launch</span></div>
+        <div class="what-title">4. Launch and stay supported</div>
+        <p class="what-desc">Your website or app goes live, and I am there if anything needs fixing.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -299,26 +376,40 @@
 <section class="what-section">
   <div class="container">
     <div class="section-header reveal">
-      <span class="section-label">Capabilities</span>
-      <h2 class="section-title">What I bring</h2>
+      <span class="section-label">Services</span>
+      <h2 class="section-title">What I can build for you</h2>
     </div>
     <div class="what-grid">
       <div class="what-card reveal">
-        <div class="what-icon"><span style="font-family:'Material Symbols Outlined';">code</span></div>
-        <div class="what-title">Django & Python</div>
-        <p class="what-desc">Production-grade Django APIs, custom backends, Celery task queues, REST APIs with DRF, and PostgreSQL databases.</p>
+        <div class="what-icon"><span style="font-family:'Material Symbols Outlined';">web</span></div>
+        <div class="what-title">A website for my business</div>
+        <p class="what-desc">Sign-ups, bookings, events and payments online, so customers and members can reach you anytime.</p>
       </div>
       <div class="what-card reveal reveal-d1">
-        <div class="what-icon"><span style="font-family:'Material Symbols Outlined';">smart_toy</span></div>
-        <div class="what-title">AI Integration</div>
-        <p class="what-desc">LLM-powered features using Llama, Groq API, OCR pipelines, and Human-in-the-Loop workflows for AI reliability.</p>
+        <div class="what-icon"><span style="font-family:'Material Symbols Outlined';">groups</span></div>
+        <div class="what-title">A system for my members or team</div>
+        <p class="what-desc">Manage members, events, attendance and elections in one place, like the Christian Union platform.</p>
       </div>
       <div class="what-card reveal reveal-d2">
-        <div class="what-icon"><span style="font-family:'Material Symbols Outlined';">dns</span></div>
-        <div class="what-title">DevOps & Deployment</div>
-        <p class="what-desc">Self-managed Ubuntu VPS, Nginx reverse proxy, Cloudflare DNS, custom SSL, and end-to-end server configuration.</p>
+        <div class="what-icon"><span style="font-family:'Material Symbols Outlined';">description</span></div>
+        <div class="what-title">Paperwork done automatically</div>
+        <p class="what-desc">Tools that read documents like invoices and organise the details for you, with a person checking the results.</p>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq-section">
+  <div class="faq-inner">
+    <div class="section-header reveal">
+      <span class="section-label">Questions</span>
+      <h2 class="section-title">Common questions</h2>
+    </div>
+      <details><summary>How long will my project take?</summary><p>It depends on the size. An invoice-reading tool I built for a client went from brief to live in 4 weeks. You get a clear delivery date before we start.</p></details>
+      <details><summary>How much will it cost?</summary><p>Every project is different, so I give a quote after understanding what you need. You know the cost upfront, with no surprises.</p></details>
+      <details><summary>Do I need to understand technology?</summary><p>No. I explain everything in plain language and handle the technical side for you.</p></details>
+      <details><summary>What if something breaks after launch?</summary><p>Contact me and I will fix it. I look after the systems I build and stay available after launch.</p></details>
   </div>
 </section>
 
@@ -326,10 +417,10 @@
 <section class="cta-band">
   <div class="container">
     <h2>Have a project in mind?</h2>
-    <p>I respond within 24 hours. Open to freelance contracts and full-time roles.</p>
+    <p>Book a free 15-minute call. Tell me what you need and I'll reply within 24 hours with a plan and a timeline.</p>
     <div class="cta-btns">
-      <a href="contact.html" class="btn-white">Get In Touch <span style="font-family:'Material Symbols Outlined';font-size:16px;vertical-align:middle;">mail</span></a>
-      <a href="projects.html" class="btn-ghost">See All Projects</a>
+      <a href="contact.html" class="btn-white">Start a Project <span style="font-family:'Material Symbols Outlined';font-size:16px;vertical-align:middle;">mail</span></a>
+      <a href="https://wa.me/254707274060?text=Hi%20MoxienTech%2C%20I%20need%20a%20website%20or%20app%20built.%20Can%20we%20talk%20about%20what%20I%20need%3F" target="_blank" rel="noopener noreferrer" class="btn-wa"><svg viewBox="0 0 24 24" width="20" height="20" fill="#fff" aria-hidden="true" style="flex-shrink:0"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> Chat on WhatsApp</a>
     </div>
   </div>
 </section>
@@ -341,43 +432,39 @@
     <div class="footer-top">
       <div>
         <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px;">
-          <div class="nav-logo-mark" style="width:32px;height:32px;font-size:.7rem;">MM</div>
+          <img class="nav-logo-img" src="logo.svg" alt="MoxienTech logo" style="height:32px" onerror="if(!this.dataset.t){this.dataset.t=1;this.src='logo.png'}else{this.style.display='none';this.nextElementSibling.style.display='flex'}"/><div class="nav-logo-mark" style="display:none;width:32px;height:32px;font-size:.7rem;">MT</div>
           <div>
-            <div class="footer-brand-name">Moses Mulwa</div>
-            <div class="footer-brand-sub">Django · AI · Nairobi, Kenya</div>
+            <div class="footer-brand-name">MoxienTech</div>
           </div>
         </div>
         <div style="display:flex;gap:16px;margin-top:16px;">
-          <a href="https://github.com/mocech" target="_blank" rel="noopener noreferrer" class="footer-link" style="margin-bottom:0;">GitHub</a>
           <a href="https://www.linkedin.com/in/moses-francis-8a590b251/" target="_blank" rel="noopener noreferrer" class="footer-link" style="margin-bottom:0;">LinkedIn</a>
-          <a href="mailto:mosesfrancis018@gmail.com" class="footer-link" style="margin-bottom:0;">Email</a>
+          <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=mosesfrancis018@gmail.com&amp;su=Project%20enquiry&amp;body=Hi%20Moses%2C%0A%0AI%20would%20like%20to%20talk%20about%20a%20project.%0A%0A" target="_blank" rel="noopener noreferrer" class="footer-link" style="margin-bottom:0;">Email</a>
         </div>
       </div>
       <div>
         <div class="footer-links-title">Navigate</div>
         <a href="index.html" class="footer-link">Home</a>
-        <a href="projects.html" class="footer-link">Projects</a>
+        <a href="projects.html" class="footer-link">Portfolio</a>
         <a href="about.html" class="footer-link">About</a>
         <a href="contact.html" class="footer-link">Contact</a>
       </div>
       <div>
-        <div class="footer-links-title">Live Apps</div>
-        <a href="https://github.com/Mocech/" target="_blank" rel="noopener noreferrer" class="footer-link">EasyHostels</a>
+        <div class="footer-links-title">Recent Work</div>
+        <a href="https://uoemcu.co.ke/" target="_blank" rel="noopener noreferrer" class="footer-link">UoEm CU Website</a>
         <a href="https://invoicesq.pythonanywhere.com/" target="_blank" rel="noopener noreferrer" class="footer-link">InvoiceIQ</a>
-        <a href="https://uoemcu.co.ke/evaluation/" target="_blank" rel="noopener noreferrer" class="footer-link">CU Evaluation</a>
-        <a href="Moses_Mulwa_Master_CV.pdf" download class="footer-link">Download CV</a>
       </div>
     </div>
     <div class="footer-copy">
-      <span>© 2026 Moses Mulwa · Nairobi, Kenya</span>
-      <span class="mono" style="font-size:.68rem;">Django · Python · VPS</span>
+      <span>© 2026 MoxienTech · Nairobi, Kenya</span>
+      <span class="mono" style="font-size:.68rem;">Built in Nairobi, Kenya</span>
     </div>
   </div>
 </footer>
 
 <nav class="mbn">
   <a href="index.html" class="mbn-item act"><span class="mbi">home</span><span>Home</span></a>
-  <a href="projects.html" class="mbn-item"><span class="mbi">work</span><span>Projects</span></a>
+  <a href="projects.html" class="mbn-item"><span class="mbi">work</span><span>Portfolio</span></a>
   <a href="about.html" class="mbn-item"><span class="mbi">person</span><span>About</span></a>
   <a href="contact.html" class="mbn-item"><span class="mbi">mail</span><span>Contact</span></a>
 </nav>
@@ -387,12 +474,65 @@ const io = new IntersectionObserver(e => e.forEach(x => { if(x.isIntersecting) x
 document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 </script>
 <!-- WhatsApp Floating Button -->
-<a href="https://wa.me/254707274060?text=Hi%20Moses%2C%20I%20found%20your%20portfolio%20and%20would%20like%20to%20connect." target="_blank" rel="noopener noreferrer" class="wa-float" aria-label="Chat on WhatsApp">
+<a href="https://wa.me/254707274060?text=Hi%20MoxienTech%2C%20I%20need%20a%20website%20or%20app%20built.%20Can%20we%20talk%20about%20what%20I%20need%3F" target="_blank" rel="noopener noreferrer" class="wa-float" aria-label="Chat on WhatsApp">
   <span class="wa-float-label">Chat on WhatsApp</span>
   <div class="wa-float-btn">
     <div class="wa-float-pulse"></div>
     <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="#fff" width="28" height="28"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
   </div>
 </a>
+<script>
+(function(){
+  var box=document.getElementById('heroShow'); if(!box) return;
+  var slides=box.querySelectorAll('.show-slide'), dots=box.querySelectorAll('.show-dots button'), i=0, t=null;
+  function go(n){ slides[i].classList.remove('active'); dots[i].classList.remove('on'); i=(n+slides.length)%slides.length; slides[i].classList.add('active'); dots[i].classList.add('on'); }
+  function start(){ if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) return; stop(); t=setInterval(function(){go(i+1)},5000); }
+  function stop(){ if(t){clearInterval(t); t=null;} }
+  dots.forEach(function(d,n){ d.addEventListener('click',function(){go(n);start();}); });
+  box.addEventListener('mouseenter',stop); box.addEventListener('mouseleave',start);
+  var x0=null; box.addEventListener('touchstart',function(e){x0=e.touches[0].clientX;stop();},{passive:true});
+  box.addEventListener('touchend',function(e){ if(x0!==null){ var dx=e.changedTouches[0].clientX-x0; if(Math.abs(dx)>40) go(i+(dx<0?1:-1)); x0=null; } start(); });
+  start();
+})();
+</script>
+<div class="lb" id="lb" hidden>
+  <div class="lb-box" role="dialog" aria-modal="true" aria-label="Work screenshot">
+    <button type="button" class="lb-x" id="lbX" aria-label="Close">&times;</button>
+    <button type="button" class="lb-nav lb-prev" id="lbP" aria-label="Previous">&lsaquo;</button>
+    <button type="button" class="lb-nav lb-next" id="lbN" aria-label="Next">&rsaquo;</button>
+    <div class="lb-stage"><img id="lbImg" alt="" hidden/><div class="lb-ph" id="lbPh"><span id="lbIc"></span>Screenshot coming soon</div></div>
+    <div class="lb-cap"><strong id="lbT"></strong><p id="lbD"></p><a id="lbA" target="_blank" rel="noopener noreferrer" hidden>View live site &rarr;</a></div>
+  </div>
+</div>
+<script>
+(function(){
+  var lb=document.getElementById('lb'); if(!lb) return;
+  var img=document.getElementById('lbImg'), ph=document.getElementById('lbPh'), cur=-1, last=null;
+  function list(){ return Array.prototype.filter.call(document.querySelectorAll('.pc-img'),function(b){return b.offsetParent!==null;}); }
+  function show(i){
+    var L=list(); if(!L.length) return; cur=(i+L.length)%L.length; var b=L[cur], im=b.querySelector('img');
+    document.getElementById('lbT').textContent=b.dataset.title; document.getElementById('lbD').textContent=b.dataset.desc;
+    var a=document.getElementById('lbA'); if(b.dataset.link){a.href=b.dataset.link;a.hidden=false;}else{a.hidden=true;}
+    var ok=im && im.complete && im.naturalWidth>0;
+    if(ok){ img.src=im.currentSrc||im.src; img.alt=b.dataset.title; img.hidden=false; ph.style.display='none'; }
+    else { img.hidden=true; img.removeAttribute('src'); document.getElementById('lbIc').innerHTML=b.querySelector('.pc-ph').innerHTML; ph.style.display='flex'; }
+    lb.hidden=false; document.body.style.overflow='hidden';
+  }
+  function close(){ lb.hidden=true; document.body.style.overflow=''; if(last) last.focus(); }
+  document.addEventListener('click',function(e){ var b=e.target.closest('.pc-img'); if(b){ last=b; show(list().indexOf(b)); } });
+  document.getElementById('lbX').onclick=close;
+  document.getElementById('lbP').onclick=function(){show(cur-1)};
+  document.getElementById('lbN').onclick=function(){show(cur+1)};
+  lb.addEventListener('click',function(e){ if(e.target===lb) close(); });
+  document.addEventListener('keydown',function(e){ if(lb.hidden) return; if(e.key==='Escape') close(); if(e.key==='ArrowLeft') show(cur-1); if(e.key==='ArrowRight') show(cur+1); });
+})();
+</script>
+<script>
+document.addEventListener('click',function(e){
+  var b=e.target.closest('.pc-more'); if(!b) return;
+  var p=b.parentNode, s=p.querySelector('.pc-short'), f=p.querySelector('.pc-full'), open=f.hidden;
+  s.hidden=open; f.hidden=!open; b.textContent=open?'Show less':'Read more'; b.setAttribute('aria-expanded',open);
+});
+</script>
 </body>
 </html>
